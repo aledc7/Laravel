@@ -175,9 +175,18 @@ If everything went well, we will have Laravel installed and ready to run it in a
 
 You can finally try this by running
 
-```
+```php
 laravel new  name-of-my-project
 ```
+
+then to launch the server we use this command:
+
+```php
+php artisan serve
+```
+
+And now you can go to localhost:8000  and see your project running.
+
 
 
 We complete the basic Laravel installation process  :)
