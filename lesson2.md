@@ -67,6 +67,11 @@ Route::get('/', function () {
 
 Above we see that a GET-type route is being declared for the home URL, then this route returns a view called welcome.   
 This view is in /resources/views/welcome.blade.php.    
-At this point we can search and edit this file to start seeing the first changes in our app.    
+At this point we can search and edit this file to start seeing the first changes in our app.   
+
+we can see that the file has the extension .blade       
+This is so because Blade is Laravel's system of seedlings, this topic will be covered later on.
+
+
 
 
