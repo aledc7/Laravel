@@ -73,5 +73,8 @@ we can see that the file has the extension .blade
 This is so because Blade is Laravel's system of seedlings, this topic will be covered later on.
 
 
+That's all for this lesson.
+
+
 
 
