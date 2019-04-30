@@ -1,10 +1,14 @@
 # Laravel
+
+## Level:  Intermediate
+### Required Knowledge:  PHP Basic
+
 This repo has all the practice of my training in Laravel. It also serve as a documentation for the most commonly used commands.  Enjoy
 
 
 
 
-## What we need?
+## What we need for run these practice?
 
 - [x] php 7
 - [x] console terminal
