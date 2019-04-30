@@ -56,7 +56,7 @@ once installed we can verify if everything went well by executing the downloaded
 php composer.phar
 ```
 
-This is my result:
+This will show among other things the list of available commands.
 
 ```php
 alejandrodecastro@aledc:~/test$ php composer.phar
@@ -124,6 +124,22 @@ Available commands:
   why                  Shows which packages cause the given package to be installed.
   why-not              Shows which packages prevent the given package from being installed.
 ```
+
+So far we have installed composer locally, which means that it will only work in the local folder where it was downloaded.
+
+It can be a good idea to install it Globally, this way it will be possible to run it in any folder you want.
+
+For this you should run the following comand in the folder where you installed it previously:
+
+```php
+mv composer.phar /usr/local/bin/composer
+```
+
+That's it, in this way we will have installed Composer on our computer.
+
+For more info, check te official documentation [Composer](https://getcomposer.org/doc/00-intro.md)
+
+
 
 
 
