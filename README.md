@@ -7,7 +7,7 @@
 This repo has all the practice of my training in Laravel. It also serve as a documentation for the most commonly used commands.  Enjoy
 
 
-- [x] Chapter 1 - Installing COMPOSER
+- [x] Chapter 1 - Installing COMPOSER and Laravel Installer
 
 Composer is an application-level package manager for the PHP programming language that provides a standard format for managing dependencies of PHP software and required libraries.
 
