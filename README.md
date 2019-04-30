@@ -1,20 +1,24 @@
 # Laravel
 
+
 ## Level:  Intermediate
 ### Required Knowledge:  PHP Basic
 
 This repo has all the practice of my training in Laravel. It also serve as a documentation for the most commonly used commands.  Enjoy
 
 
+- [x] Chapter 1 - Installing COMPOSER
+
+Composer is an application-level package manager for the PHP programming language that provides a standard format for managing dependencies of PHP software and required libraries.
 
 
 ## What we need for run these practice?
 
-- [x] php 7
+- [x] php 7 installed on your machine
 - [x] console terminal
 - [x] Internet, of course
 
-you need to have PHP installed on your terminal, so you can test if you already has
+
 you need to have php installed, then you can check if you have it installed with the command:
 
 ```php
@@ -138,6 +142,51 @@ mv composer.phar /usr/local/bin/composer
 That's it, in this way we will have installed Composer on our computer.
 
 For more info, check te official documentation [Composer](https://getcomposer.org/doc/00-intro.md)
+
+
+Now, we can create our first project.
+
+```php
+composer create-project --prefer-dist laravel/laravel hellolaravel
+```
+
+ahother way is throught the Laravel Installer:
+
+```php
+composer global require "laravel/installer"
+```
+
+after this, you need to add the Path to your system.
+
+in Mac:
+```
+nano ~/.bash_profile
+```
+
+then, add this line, save and restart the terminal.
+
+```
+export PATH=/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
+```
+
+
+If everything went well, we will have Laravel installed and ready to run it in any folder.
+
+
+You can finally try this by running
+
+```
+laravel new  name-of-my-project
+```
+
+
+We complete the basic Laravel installation process  :)
+
+
+We will continue with lesson 2
+
+
+
 
 
 
