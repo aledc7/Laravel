@@ -51,8 +51,22 @@ All urls will be redirected to the index file. php located at:
 
 All the files that are in the public folder will be precisely public, and all the files that are outside this folder will be private.
 
-When you want to put the folder in production, you must point as the main path to:  /public/index.php
-The App and user's routes requests are configured in the file:  /routes/web.php
-Similarly, the routes of an API are defined in the file /routes/api.php
+When you want to put the folder in production, you must point as the main path to:  /public/index.php    
+The App and user's routes requests are configured in the file:  /routes/web.php     
+Similarly, the routes of an API are defined in the file /routes/api.php      
+
+
+Take as an example the file web.php, this will have this code:      
+
+
+```php
+Route::get('/', function () {
+    return view('welcome');
+});
+```
+
+Above we see that a GET-type route is being declared for the home URL, then this route returns a view called welcome.   
+This view is in /resources/views/welcome.blade.php.    
+At this point we can search and edit this file to start seeing the first changes in our app.    
 
 
