@@ -6,6 +6,10 @@ This repo has all the practice of my training in Laravel. It also serve as a doc
 
 ## What we need?
 
+- [x] php 7
+- [x] console terminal
+- [x] Internet, of course
+
 you need to have PHP installed on your terminal, so you can test if you already has
 you need to have php installed, then you can check if you have it installed with the command:
 
