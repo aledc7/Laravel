@@ -24,7 +24,10 @@ Route::get('/othertest',function (){
 
 ```
 
-Above we have defined three different routes, one will be the home page('/') , another one called test ('/test'), and a third call othertest('/othertest')
-In the cited example, these routes return a string of text, but the idea is to point to a component, which will be a section of our App.
+Above we have defined three different routes, one will be the home page('/') .   
+Another one called test ('/test'), and a third call othertest('/othertest') .  
+In the cited example, these routes return a string of text, but the idea is to point to a component, which will be a section of our App.    
+
+
 
 
