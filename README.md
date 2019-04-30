@@ -7,12 +7,12 @@
 This repo has all the practice of my training in Laravel. It also serve as a documentation for the most commonly used commands.  Enjoy
 
 
-- [x] Chapter 1 - Installing COMPOSER and Laravel Installer
+## Chapter 1 - Installing Composer and Laravel Installer
 
 Composer is an application-level package manager for the PHP programming language that provides a standard format for managing dependencies of PHP software and required libraries.
 
 
-## What we need for run these practice?
+### What we need for run these practice?
 
 - [x] php 7 installed on your machine
 - [x] console terminal
