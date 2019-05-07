@@ -27,7 +27,12 @@ Route::get('/othertest',function (){
 Above we have defined three different routes for our project, one will be the home page('/') and will return the welcome view     
 Other one called test ('/test'), and will return a string 'test of another rute'
 and third call othertest('/othertest') .  
-In the cited example, these routes return a string of text, but the idea is to point to a component, which will be a section of our project.    
+In the cited example, these routes return a string of text, but the idea is to point to a component, which will be a section of our project.
+
+### Resources
+
+The __resources__ folder containt all the assets, languages and views (blade templates)
+
 
 
 
