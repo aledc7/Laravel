@@ -31,7 +31,7 @@ In the cited example, these routes return a string of text, but the idea is to p
 
 
 
-```
+```php
 // route example that returns a parameter passed
 Route::get('/usuarios/{id}', function($id){
     return "Mostrando detalle del usuario: {$id}";
