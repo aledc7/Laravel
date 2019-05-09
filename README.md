@@ -56,7 +56,7 @@ https://getcomposer.org/download/
 
 once installed we can verify if everything went well by executing the downloaded file composer.phar
 
-```
+```php
 php composer.phar
 ```
 
@@ -159,13 +159,13 @@ composer global require "laravel/installer"
 after this, you need to add the Path to your system.
 
 in Mac:
-```
+```php
 nano ~/.bash_profile
 ```
 
 then, add this line, save and restart the terminal.
 
-```
+```php
 export PATH=/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 ```
 
