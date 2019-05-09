@@ -2,9 +2,14 @@
 
 ## Routes in Laravel
 
-Begin to define our first routes, as we saw in the last chapter, we must edit the file /routes/web.php      
-Note that if it were an API we should modify the file corresponding to the APIs, this is /route/api.php  
-
+Begin to define our first routes, as we saw in the last chapter, we must edit the file:
+```php
+/routes/web.php      
+```
+Note that if it were an API we should modify the file corresponding to the APIs, this is:
+```php
+/route/api.php  
+```
 We could say that the routes are our  personalized "url addresses" that we define. The routes are defined as follows:    
 
 ```php
