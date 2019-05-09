@@ -38,7 +38,10 @@ Route::get('/usuarios/{id}', function($id){
 });
 
 
-// other example with a condition,
+// Other example with a condition:
+// in this example I create a route in which two parameters, name and nickname must be passed
+// The sign ? which is passed to the nickname parameter means that it is optional,   
+// if that sign is not passed, and the parameter is not passed, it will give an error.   
 Route::get('/Hola/{name}/{nickname?}', function($name, $nickname = null){
     if ($nickname) {
         return "Welcome {$name}, your nickname is: {$nickname}";
