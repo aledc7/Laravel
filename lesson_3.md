@@ -1,4 +1,4 @@
-# Lesson 3
+# Lesson 3 - Laravel
 
 ## Routes in Laravel
 
@@ -55,20 +55,3 @@ Route::get('/Hola/{name}/{nickname?}', function($name, $nickname = null){
     }
 });
 ```
-
-
-
-
-
-
-### Resources
-
-The __resources__ folder containt all the assets, languages and views (blade templates)
-
-
-
-
-
-
-
-
