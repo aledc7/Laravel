@@ -57,3 +57,111 @@ Route::get('/Hola/{name}/{nickname?}', function($name, $nickname = null){
     }
 });
 ```
+
+
+
+## Example of web.php file with coments in my native Spanish
+```php
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+
+/*
+|--------------------------------------------------------------------------
+| Rutas en Laravel
+|--------------------------------------------------------------------------
+| Laravel tiene un potente Framework , que maneja las rutas por vos.
+| Simplemente se declara la ruta, y luego hay una función que hace lo que necesites
+| desde devolver un string, un objeto, devolver una vista, o lo que se necesite.
+| Es posible usar "parámetros dinámicos" entre llaves para obtener parámetros en la url, que luego usará la funcion de cada ruta.
+| Estos parametros dinámicos se pasan usando las llaves { } y dentro la palabra o id que quieras poner.
+| Es posible pasar en la url mas de un parámetro, como veremos en el ejemplo siguiente.
+| Tambien es posible crear cualquier lógica con cualquier estructura que maneje php como ser if, else, etc.
+|  
+| Lo mas comun es usar el framework de las rutas solo para devolver una View, usando un return.
+| Esto se cubrirá en su totalidad mas adelante.
+*/
+
+
+
+// en Laravel el orden de las rutas es Fundamental, Laravel tomará la primer
+// ruta que coincida y el resto simplemente las ignora.
+
+
+// Esta ruta es la ruta principal del HOME, y devuelve una vista llamada welcome
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// aca tenemos la ruta /test que devuelve una cadena de texto 'test of new route 1'
+Route::get('/test',function (){
+    return 'test of new route 1';
+});
+
+// otro ejemplo de ruta llamada /othertest que también devuelve una cadena te texto.
+Route::get('/othertest',function (){
+    return 'test of another route';
+});
+
+
+// este ejemplo pasa un parametro, que luego será devuelto por la funcion anonima.
+Route::get('/usuarios/{id}', function($id){
+    return "Mostrando detalle del usuario: {$id}";
+});
+
+
+// ejemplo igual al anterio, pasa un parametro, que luego será devuelto por la funcion anonima.
+Route::get('/usuarios2/{mi_parametro}', function($mi_parametro){
+    return "Mostrando detalle del usuario: {$mi_parametro}";
+});
+
+// Ejemplo en donde uso un "where" para limitar a que en la url solo se puedan poner numeros
+// del 1 al 9 y mas de un numero (+)
+Route::get('/where/{mi_parametro}', function($mi_parametro){
+    return "Mostrando detalle del usuario: {$mi_parametro}";
+})->where('mi_parametro','[0-9]+');
+
+
+
+
+
+
+/* En este ejemplo creo una ruta en la que se deben pasar dos parametros.  
+| El signo ? que se le pasa al parametro 'apodo' significa que es opcional.   
+| Si no se le pasa ese signo, y el parametro no es pasado, dará error.
+| Observese que dentro de la función anónima, el parámetro 'apodo' es definido 
+| como null, para que no de error.
+| por último, como esto es php de fondo, se puede usar cualquier lógica que queramos
+| en este caso uso un "if else"  
+*/ 
+
+Route::get('/Hola/{nombre}/{apodo?}', function($nombre, $apodo = null){
+    if ($apodo) {
+        return "Bienvenido {$nombre}, tu apodo es: {$apodo}";
+    } else {
+        return "Bienvenido {$nombre}, No pasaste ningun parametro como apodo";
+    }
+});
+
+
+
+// lo mismo que arriba pero con etiquetas html para hacer grande el texto y darle estilo.
+Route::get('/Holaestilo/{nombre}/{apodo?}', function($nombre, $apodo = null){
+    if ($apodo) {
+        return "<h1>Bienvenido {$nombre}, tu apodo es: {$apodo} </h1> ";
+    } else {
+        return "<h1>Bienvenido {$nombre}, No pasaste ningun parametro como apodo</h1>";
+    }
+});
+```
+
+
+
