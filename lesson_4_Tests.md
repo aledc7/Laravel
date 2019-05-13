@@ -83,8 +83,7 @@ class rutausuariosTest extends TestCase
     {   // aca simulo una peticion del tipo get a la url indicada.
         $this->get('/usuarios/5')
             // aca le digo que la respuesta debe ser 200, o sea que si encuentre la url
-            ->assertStatus(200)
-            
+            ->assertStatus(200)            
             // aca le digo que la ruta debe mostrar esta cadena de texto.
             ->assertSee("Mostrando detalle del usuario: 5");
     }
