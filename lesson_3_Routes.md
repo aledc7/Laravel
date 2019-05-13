@@ -1,4 +1,4 @@
-# Lesson 3 - Laravel
+# Lesson 3 - Routes
 
 ## Routes in Laravel
 
