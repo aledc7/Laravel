@@ -80,7 +80,7 @@ class rutausuariosTest extends TestCase
      * @return void
      */
     public function testRutaUsers()
-    {
+    {   // aca simulo una peticion del tipo get a la url indicada.
         $this->get('/usuarios/5')
             ->assertStatus(200)
             ->assertSee("Mostrando detalle del usuario: 5");
