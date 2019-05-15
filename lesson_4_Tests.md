@@ -34,7 +34,7 @@ OK (2 tests, 2 assertions)
 
 Ahora bien, como este comando se utilizará varias veces, es una buena idea crear un Alias con este comando, de esta manera será  mas fácil invocar.
 
-es posible crear cualquier alias simplemente escribiendo alias  nombre=comando
+Es posible crear cualquier alias simplemente escribiendo __alias  nombre=comando__    
 
 ```php
 alias test=vendor/bin/phpunit
@@ -42,7 +42,9 @@ alias test=vendor/bin/phpunit
 En el ejemplo de arriba he creado un alias llamado __test__ que será el equivalente a escribir el comando completo: vendor/bin/phpunit    
 
 
-luego al ejecutar el comando __test__ , Laravel va a recorrer la carpeta Test y ejecutara una prueba por cada archivo que encuentre con el nombre terminando en  Test.php
+Luego al ejecutar el comando __test__ , Laravel va a recorrer la carpeta Test y ejecutara una prueba por cada archivo que encuentre con el nombre terminando en Test.php
+
+NOTA:  si el nombre del archivo no termina en Test.php sencillamente no se ejecutará cuando se corra el test.
 
 En el ejemplo que vimos arriba observamos que se han ejecutado dos test, estos corresponden a los dos archivos que Laravel genera de manera automatizada, uno es  __ExampleTest.php__ dentro de la carpeta __Feature__ y el mismo nombre de archivo __ExampleTest.php__ en la carpeta __Unit__.  
 
@@ -93,18 +95,19 @@ class rutausuariosTest extends TestCase
 
 ### Es posible poner en un mismo archivo de test varias funciones que testeen varias rutas, de esta manera se evitará tener que crear un archivo por cada test.
 
-para lograr esto, se pueden incluir varias funciones, anteponiendo adelante de cada una __@test__ como se muestra aqui:    
+para lograr esto, se pueden incluir varias funciones, anteponiendo adelante un bloque de codigo comentado un __@test__ como se muestra aqui:    
 
 ```php
      /**
-     * Test de Ruta othertest
+     * Este comentario es opcional pero altamente recomendado, así podremos saber que está testeando la función.
      *
      @test
      */
 ```
 
-##### Aqui un ejemplo completo de un controlador para test que realiza 6 test y verifica cada ruta definida, y que devuelva lo que se supone que tiene que devolver. En estos casosa de ejemplo se trata solo de strings.  
-Observese que antes de cada funcion es necesario poner el comentario con el __@test__ 
+##### Aqui un ejemplo completo de un controlador para test que realiza 6 test y verifica cada ruta definida, y que devuelva lo que se supone que tiene que devolver.  
+En estos casosa de ejemplo se trata solo de strings.   
+Observese que antes de cada función es necesario poner la linea de código comentada con el __@test__ 
 
 
 ```php
