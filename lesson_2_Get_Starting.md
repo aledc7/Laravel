@@ -66,7 +66,8 @@ Route::get('/', function () {
 ```
 
 Above we see that a GET-type route is being declared for the home URL, then this route returns a view called welcome.   
-This view is in:
+
+### Views Folder
 ```php
 /resources/views/welcome.blade.php    
 ```
