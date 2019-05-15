@@ -3,7 +3,7 @@
 ## Controladores en Laravel
 
 
-Laravel agrupa toda la lógica en una capa __Controlers__ que contendrá toda la Lógica de nuestra Aplicación, entre otras cosas, peticiones HTTP relacionadas dentro de una clase, y dividirlas en varios métodos.
+Laravel agrupa toda la lógica en una capa __Controlers__ que contendrá la Lógica de nuestra Aplicación, entre otras cosas, peticiones HTTP relacionadas dentro de una clase, y dividirlas en varios métodos.
 
 
 ### Ubicacion de los controladores:
@@ -48,7 +48,10 @@ En resumidas cuentas el namesp
 ### Que es un namespace
 
 Arriba vemos en la controladora recien creada que aparece __namespace__ y luego una ruta.   
-Esta ruta será la carpeta en donde exista la controladora.  De esta manera es posible crear dos clases con el mismo nombre pero en ubicaciones distintas
+Esta ruta será la carpeta en donde exista la controladora.  De esta manera es posible crear dos clases con el mismo nombre pero en ubicaciones distintas.
+
+
+
 
 
 
