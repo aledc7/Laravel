@@ -1,5 +1,7 @@
-# Laravel
+![Laravel](https://github.com/aledc7/Laravel/blob/master/laravel_logo.png?raw=true "Aledc.com")
 
+
+## Laravel 
 
 ## Level:  Intermediate
 ### Required Knowledge:  PHP Basic
