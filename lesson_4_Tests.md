@@ -91,7 +91,109 @@ class rutausuariosTest extends TestCase
 
 ```
 
+### Es posible poner en un mismo archivo de test varias funciones que testeen varias rutas, de esta manera se evitará tener que crear un archivo por cada test.
 
+para lograr esto, se pueden incluir varias funciones, anteponiendo adelante de cada una __@test__ como se muestra aqui:    
+
+```php
+     /**
+     * Test de Ruta othertest
+     *
+     @test
+     */
+```
+
+##### Aqui un ejemplo completo de un controlador para test que realiza 6 test y verifica cada ruta definida, y que devuelva lo que se supone que tiene que devolver. En estos casosa de ejemplo se trata solo de strings.  
+Observese que antes de cada funcion es necesario poner el comentario con el __@test__ 
+
+
+```php
+<?php
+
+namespace Tests\Feature;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class TesteoRutaTest extends TestCase
+{
+    /**
+     * Test de Ruta test
+     *
+     @test
+     */
+    function testRutaTest()
+    {
+        $this->get('/test')
+            ->assertStatus(200)
+            ->assertSee('test of new route 1');
+    }
+    
+    /**
+     * Test de Ruta usuarios
+     *
+     @test
+     */
+    function usuariosRutaTest()
+    {
+        $this->get('/usuarios')
+            ->assertStatus(200)
+            ->assertSee("Usuarios");
+    }
+
+    /**
+     * Test de Ruta othertest
+     *
+     @test
+     */
+    function othertestRutaTest()
+    {
+        $this->get('/othertest')
+            ->assertStatus(200)
+            ->assertSee("Test of Another Route");
+    }
+
+    /**
+     * Test de Ruta usuaruisID
+     *
+     @test
+     */
+    function usuariosId()
+    {
+        $this->get('/usuarios/5')
+            ->assertStatus(200)
+            ->assertSee("Mostrando detalle del usuario: 5");
+    }
+
+    /**
+     * Test de Ruta usuarios2Id
+     *
+     @test
+     */
+    function usuarios2Id()
+    {
+        $this->get('/usuarios2/texto_x')
+            ->assertStatus(200)
+            ->assertSee("Mostrando detalle del usuario: texto_x");
+    }
+
+    /**
+     * Test de Ruta whereId
+     *
+     @test
+     */
+    function whereId()
+    {
+        $this->get('/where/7')
+            ->assertStatus(200)
+            ->assertSee("Mostrando detalle del usuario: 7");
+    }
+
+    
+    
+}
+```
 
 
 
