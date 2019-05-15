@@ -45,7 +45,10 @@ En resumidas cuentas el namesp
 > PSR-4 fue creada por el grupo de interoperabilidad de PHP. Este grupo ha trabajado en la creación de especificaciones que nos permitan a nosotros, desarrolladores de PHP, estandarizar muchos procesos, como, en este caso, la manera como nombramos a las clases.
 > 
 
+### Que es un namespace
 
+Arriba vemos en la controladora recien creada que aparece __namespace__ y luego una ruta.   
+Esta ruta será la carpeta en donde exista la controladora.  De esta manera es posible crear dos clases con el mismo nombre pero en ubicaciones distintas
 
 
 
