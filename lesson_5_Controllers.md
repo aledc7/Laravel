@@ -90,6 +90,26 @@ function whereId()
 
 
 
+Entonces al ejecutar el Test nos dara una informacion mas detallada, indicando el error, y el nombre de la prueba que disparo el error
+
+```php
+FAILURES!
+Tests: 6, Assertions: 11, Failures: 1.
+alejandrodecastro@aledc:/Applications/MAMP/htdocs/laravel/training-aledc$ vendor/bin/phpunit
+PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+
+.....E                                                              6 / 6 (100%)
+
+Time: 181 ms, Memory: 12.00MB
+
+There was 1 error:
+
+1) Tests\Feature\TesteoRutaTest::whereId
+ErrorException: Undefined variable: paramet11
+```
+
+
+
 
 
 
