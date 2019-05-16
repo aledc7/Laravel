@@ -108,6 +108,18 @@ There was 1 error:
 ErrorException: Undefined variable: paramet11
 ```
 
+Es posible crear un controlador que solo tenga una única accion, esto se logra escribiendo **__vendor** en lugar del nombre del método de la función publica...  acá un ejemplo:
+```php
+    public function __invoke($paramet1)
+    {
+        return "Mostrando detalle del usuario: {$paramet1}";
+    }
+```
+Luego en el archivo de rutas __web.php__ ya no se debe poner el nombre __controlador@nombre_metodo__  sino solamente el nombre de la clase, como muestro aqui:
+```php
+Route::get('/where/{mi_parametro}', 'WhereController')
+```
+
 
 
 
