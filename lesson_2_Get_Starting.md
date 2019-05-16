@@ -79,6 +79,8 @@ This is so because Blade is Laravel's system of seedlings, this topic will be co
 
 That's all for this lesson.
 
+[Go to Lesson 3 ->](https://github.com/aledc7/Laravel/blob/master/lesson_3_Routes.md)
+
 
 
 
