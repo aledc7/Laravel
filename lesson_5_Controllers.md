@@ -49,6 +49,32 @@ La clase tiene un __namespace__  que sigue el patron __PSR4__
 Arriba vemos en la controladora recien creada que aparece __namespace__ y luego una ruta.   
 Esta ruta será la carpeta en donde exista la controladora.  De esta manera es posible crear dos clases con el mismo nombre pero en ubicaciones distintas.
 
+
+## Ejemplo de Controladora
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ShowController extends Controller
+{
+    public function show($id)
+    {
+        return "Mostrando detalle del usuario: {$id}";
+    }
+}
+```
+
+## y ejemplo del fragmento de código del archivo de rutas web.php en donde se vincula con la funcion de arriba:
+```php
+Route::get('/usuarios/{id}', 'ShowController@show');
+```
+
+
+
+
 ## Logs en Laravel
 
 Laravel tiene un LOG en donde se registrará cada error que ocurra, este es centralizado en el archivo:
