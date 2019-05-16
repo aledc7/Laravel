@@ -198,6 +198,9 @@ class TesteoRutaTest extends TestCase
 }
 ```
 
+[Go to Lesson 5 ->](https://github.com/aledc7/Laravel/blob/master/lesson_5_Controllers.md)
+
+
 
 
 
