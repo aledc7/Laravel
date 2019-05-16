@@ -230,5 +230,6 @@ Este es el archivo principal para instlar laravel, y también es el que se utili
     }
     ```
     
+    [Go to Lesson 4 ->](https://github.com/aledc7/Laravel/blob/master/lesson_4_Tests.md)
 
 
