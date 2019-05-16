@@ -49,7 +49,7 @@ La clase tiene un __namespace__  que sigue el patron __PSR4__
 Arriba vemos en la controladora recien creada que aparece __namespace__ y luego una ruta.   
 Esta ruta será la carpeta en donde exista la controladora.  De esta manera es posible crear dos clases con el mismo nombre pero en ubicaciones distintas.
 
-### Logs en Laravel
+## Logs en Laravel
 
 Laravel tiene un LOG en donde se registrará cada error que ocurra, este es centralizado en el archivo:
 ```php
@@ -62,6 +62,32 @@ Aqui pongo este ejemplo de la primer linea de error, que me está diciendo que t
 [2019-05-16 14:54:59] testing.ERROR: Undefined variable: paramet11 {"exception":"[object] (ErrorException(code: 0): Undefined variable: paramet11 at /Applications/MAMP/htdocs/laravel/training-aledc/app/Http/Controllers/UserController.php:36)
 [stacktrace]
 ```
+
+También tenemos la posibilidad de visualizar esta informacion al momento de correr el test. esto se logra llamando a un método dentro del archivo de TEST que hayamos definido previamente.  
+
+Este es el método que debemos incluír en cada función de nuestro archivo de test:   
+```php
+$this->withoutExceptionHandling();
+```
+
+Aquí el ejemplo copmpleto de como quedaría la función de test con la invocación al metodo:
+```php
+/**
+* Test de Ruta whereId
+*
+@test
+*/
+function whereId()
+{
+    // Este método hace que al ejecutar el TEST informe el error con un detalle mayor (igual que en el log)
+    $this->withoutExceptionHandling();
+    
+    $this->get('/where/7')
+        ->assertStatus(200)
+        ->assertSee("Mostrando detalle del usuario: 7");
+}
+```
+
 
 
 
