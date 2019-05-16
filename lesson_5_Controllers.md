@@ -38,7 +38,6 @@ La controladora de arriba recien creada es una __Clase__ de php.
 
 
 La clase tiene un __namespace__  que sigue el patron __PSR4__   
-En resumidas cuentas el namesp
 
 
 > 
