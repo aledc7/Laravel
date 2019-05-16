@@ -57,7 +57,7 @@ Laravel tiene un LOG en donde se registrará cada error que ocurra, este es cent
 ```
 El archivo de Log puede que tenga gran cantidad de información, por lo que es una buena práctica borrar su contenido antes de intentar debugear que es lo que está pasando.
 Luego al abrir el archivo nos encontramos con mucha info, aunque la info mas relevante estará en la primer linea.   
-Aqui pongo este ejemplo de la primer linea de error, que me está diciendo que tengo una variable no definida, o sea mal escrita en mi caso.    
+Aqui pongo este ejemplo de la primer linea de error, que me está diciendo que tengo una variable no definida, y el numero de linea , o sea mal escrita en mi caso.    
 ```php
 [2019-05-16 14:54:59] testing.ERROR: Undefined variable: paramet11 {"exception":"[object] (ErrorException(code: 0): Undefined variable: paramet11 at /Applications/MAMP/htdocs/laravel/training-aledc/app/Http/Controllers/UserController.php:36)
 [stacktrace]
