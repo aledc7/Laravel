@@ -1,3 +1,5 @@
+![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
+
 # Lesson 2
 
 So, we have everything ready for start with our code.
