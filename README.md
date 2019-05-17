@@ -1,12 +1,11 @@
 ![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
 
 
-## Laravel 
 
 ## Level:  Intermediate
 ### Required Knowledge:  PHP Basic
 
-This repo has all the practice of my training in Laravel. It also serve as a documentation for the most commonly used commands.  Enjoy
+This repo has all the practice of my training in Laravel. It also serve as a Documentation for the most commonly used commands.  
 
 
 ## Chapter 1 - Installing Composer and Laravel Installer
