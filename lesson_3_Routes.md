@@ -1,6 +1,5 @@
-# Lesson 3 - Routes
 ![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
-
+# Lesson 3 - Routes
 ## Routes in Laravel
 
 Begin to define our first routes, as we saw in the last chapter, we must edit the file:
