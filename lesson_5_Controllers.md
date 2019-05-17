@@ -147,16 +147,3 @@ Luego en el archivo de rutas __web.php__ ya no se debe poner el nombre __control
 ```php
 Route::get('/where/{mi_parametro}', 'WhereController')
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
