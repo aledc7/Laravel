@@ -1,4 +1,4 @@
-![Laravel](https://github.com/aledc7/Laravel/blob/master/laravel_logo.png?raw=true "Aledc.com")
+![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
 
 
 ## Laravel 
