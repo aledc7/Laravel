@@ -136,7 +136,7 @@ There was 1 error:
 ErrorException: Undefined variable: paramet11
 ```
 
-Es posible crear un controlador que solo tenga una única función, esto se logra escribiendo **__invoke** en lugar del nombre del método de la función publica...  acá un ejemplo:
+Es posible crear un controlador que solo tenga una única función, esto se logra cambiando el nombre del método por la palabra **__invoke** entonces ponemos esa palabra en lugar del nombre del método de la función publica...  acá un ejemplo:
 ```php
     public function __invoke($paramet1)
     {
