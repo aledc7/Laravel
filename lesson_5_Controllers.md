@@ -22,7 +22,7 @@ Si todo fue bien, se tiene que haber creado el archivo:
 ```php
 /app/Http/Controllers/ControladorPrueba.php
 ```
-Con la siguiente estructura que enseguida explicaré:
+Un controlador no es más que un archivo .php con una clase que extiende de la clase App\Http\Controllers\Controller:
 ```php
 <?php
 
@@ -69,7 +69,9 @@ class ShowController extends Controller
 }
 ```
 
-## y ejemplo del fragmento de código del archivo de rutas web.php en donde se vincula con la funcion de arriba:
+
+## Enlazar una ruta a un controlador
+Para enlazar una ruta a un controlador pasamos como argumento el nombre del controlador y del método que queremos enlazar, separados por un @. En este caso queremos enlazar la ruta /usuarios al método show del controlador ShowController:
 ```php
 Route::get('/usuarios/{id}', 'ShowController@show');
 ```
@@ -135,7 +137,8 @@ There was 1 error:
 1) Tests\Feature\TesteoRutaTest::whereId
 ErrorException: Undefined variable: paramet11
 ```
-
+## Controlador de un solo método
+Si quieres tener un controlador que solo tenga una acción, puedes hacerlo llamando al método **__invoke**
 Es posible crear un controlador que solo tenga una única función, esto se logra cambiando el nombre del método por la palabra **__invoke** entonces ponemos esa palabra en lugar del nombre del método de la función publica...  acá un ejemplo:
 ```php
     public function __invoke($paramet1)
