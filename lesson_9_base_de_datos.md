@@ -112,7 +112,11 @@ $table->integer('nombre_de_la_columna')->unsigned()->default(0); crea una column
 Puedes ver todos los métodos disponibles para crear columnas en la documentación oficial de Laravel.
 
 ## Métodos Helpers
-Una de las tantas ventajas de usar el constructor de esquemas de Laravel, es que este incluye métodos helpers que facilitan tareas comunes y evitan la necesidad de duplicar código, por ejemplo el método: $table->timestamps(); agregará 2 columnas: created_at y updated_at de tipo timestamp (marca de tiempo) a la tabla en cuestión. Estas columnas son bastante típicas para almacenar el momento en que un registro fue creado o actualizado.
+Una de las tantas ventajas de usar el constructor de esquemas de Laravel, es que este incluye métodos helpers que facilitan tareas comunes y evitan la necesidad de duplicar código, por ejemplo el método:
+```php
+$table->timestamps();
+```
+agregará 2 columnas: __created_at__ y __updated_at__ de tipo timestamp (marca de tiempo) a la tabla en cuestión. Estas columnas son bastante típicas para almacenar el momento en que un registro fue creado o actualizado.
 
 En programación un Helper no es más que una función de apoyo que permite resolver tareas genéricas / comunes.
 
