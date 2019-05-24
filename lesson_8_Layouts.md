@@ -2,6 +2,12 @@
 
 # Lesson 8 - Layouts con Blade
 
+
+```php
+php artisan migrate
+```
+
+
 A medida que nuestro proyecto crece nuestras plantillas se vuelven más complejas y es inevitable encontrarnos con que estamos repitiendo etiquetas y estructuras que podríamos compartir entre multiples vistas. Es por ello que en esta lección te enseñaremos a integrar cualquier diseño usando Laravel Blade; para que de esta manera puedas sacarle provecho a las diferentes directivas que ofrece este motor de plantillas y evitar así la repetición de código HTML, además de mantener tus vistas sencillas, expresivas, elegantes y bien estructuradas.
 
 
