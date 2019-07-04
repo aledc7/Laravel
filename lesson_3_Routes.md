@@ -171,7 +171,7 @@ Route::get('/Holaestilo/{nombre}/{apodo?}', function($nombre, $apodo = null){
 
 ## Archivo composer.json
 
-Este es el archivo principal para instlar laravel, y también es el que se utiliza para el manejo de dependencias del proyecto y sirve para Autocargar las Clases.
+Este es el archivo principal para instalar __Laravel__, también es el que se utiliza para el manejo de dependencias del Proyecto y sirve para Autocargar las Clases.
 
 ### Ejemplo del archivo composer.json
 ```php
