@@ -236,6 +236,6 @@ Este es el archivo principal para instalar __Laravel__, también es el que se ut
     }
 ```
     
-[Go to Lesson 4 ->](https://github.com/aledc7/Laravel/blob/master/lesson_4_Tests.md)
+[Go to Lesson 3.1 - RUTAS CON FILTROS ->](https://github.com/aledc7/Laravel/blob/master/lesson_3.1_Routes%26Filters.md)
 
 
