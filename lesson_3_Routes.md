@@ -167,7 +167,7 @@ Route::get('/Holaestilo/{nombre}/{apodo?}', function($nombre, $apodo = null){
         return "<h1>Bienvenido {$nombre}, No pasaste ningun parametro como apodo</h1>";
     }
 });
-```
+```js
 
 ## Archivo composer.json
 
