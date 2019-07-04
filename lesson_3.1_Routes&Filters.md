@@ -141,4 +141,4 @@ Route::get('user/{name}', function ($name) {
  
  
  
- A practicar -->
+[Ir a la Leccion 4 - TESTS ->](https://github.com/aledc7/Laravel/blob/master/lesson_4_Tests.md)
