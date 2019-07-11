@@ -12,10 +12,6 @@
 Laravel cuenta con una capa denominada __CONTROLLER__ que permite __agrupar__ peticiones __http__ dentro de __clases__ y a su vez dividirlas en varios __métodos__.
 
 
-
-Laravel agrupa toda la lógica en una capa __Controlers__ que contendrá la Lógica de nuestra Aplicación, entre otras cosas, peticiones HTTP relacionadas dentro de una clase, y dividirlas en varios métodos.
-
-
 ### Ubicacion de los controladores:
 ```php
 /app/Http/Controllers/
