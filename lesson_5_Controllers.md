@@ -7,7 +7,10 @@
 [![Dependencies](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/dependencias-none.svg)](https://aledc.com)
 # Lesson 5 - Controllers
 
-## Controladores en Laravel
+# Controladores en Laravel
+
+Laravel cuenta con una capa denominada __CONTROLLER__ que permite __agrupar__ peticiones __http__ dentro de __clases__ y a su vez dividirlas en varios __métodos__.
+
 
 
 Laravel agrupa toda la lógica en una capa __Controlers__ que contendrá la Lógica de nuestra Aplicación, entre otras cosas, peticiones HTTP relacionadas dentro de una clase, y dividirlas en varios métodos.
