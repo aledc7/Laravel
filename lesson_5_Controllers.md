@@ -75,13 +75,15 @@ class ShowController extends Controller
 
 
 ## Enlazar una ruta a un controlador
-Para enlazar una ruta a un controlador se declara el nombre del controlador seguido de una arroba y el nombre de la funcion que queremos invocar para esa ruta.  
-En este caso queremos enlazar la ruta /usuarios/{id} con la contoladora Showcontroller, que dentro tendrá la funcion llamada 'show' 
+Para enlazar una Ruta a un Controlador previamente creado, se declara dentro del archivo de rutas, el nombre del Controlador seguido de una @ y el nombre de la función que queremos invocar para esa ruta.
+
+En este caso queremos enlazar la ruta /usuarios/{id} con la contoladora Showcontroller, que dentro tendrá la funcion llamada 'show'
+aquí vemos el ejemplo:   
 ```php
 Route::get('/usuarios/{id}', 'ShowController@show');
 ```
 
-Observese que en la ruta tenemos id entre llaves, esto es un parámetro opcional, para indicarle a laravel que se pasará una variable o parámetro.    
+Observese que en la ruta tenemos {id} entre llaves, esto es un parámetro opcional, para indicarle a laravel que se pasará una variable o parámetro.  De esta manera puedo pasar cualquier otra variable.    
 
 
 
