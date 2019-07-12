@@ -85,6 +85,19 @@ Route::get('/usuarios/{id}', 'ShowController@show');
 
 Observese que en la ruta tenemos {id} entre llaves, esto es un parámetro opcional, para indicarle a laravel que se pasará una variable o parámetro.  De esta manera puedo pasar cualquier otra variable.    
 
+## Controlador de un solo método
+Si quieres tener un controlador que solo tenga una acción, puedes hacerlo llamando al método **__invoke**
+Es posible crear un controlador que solo tenga una única función, esto se logra cambiando el nombre del método por la palabra **__invoke** entonces ponemos esa palabra en lugar del nombre del método de la función publica...  acá un ejemplo:
+```php
+    public function __invoke($paramet1)
+    {
+        return "Mostrando detalle del usuario: {$paramet1}";
+    }
+```
+Luego en el archivo de rutas __web.php__ ya NO se debe poner el nombre __controlador@nombre_metodo__  sino solamente el nombre de la clase, como muestro aqui:
+```php
+Route::get('/where/{mi_parametro}', 'WhereController')
+```
 
 
 
@@ -145,17 +158,4 @@ There was 1 error:
 
 1) Tests\Feature\TesteoRutaTest::whereId
 ErrorException: Undefined variable: paramet11
-```
-## Controlador de un solo método
-Si quieres tener un controlador que solo tenga una acción, puedes hacerlo llamando al método **__invoke**
-Es posible crear un controlador que solo tenga una única función, esto se logra cambiando el nombre del método por la palabra **__invoke** entonces ponemos esa palabra en lugar del nombre del método de la función publica...  acá un ejemplo:
-```php
-    public function __invoke($paramet1)
-    {
-        return "Mostrando detalle del usuario: {$paramet1}";
-    }
-```
-Luego en el archivo de rutas __web.php__ ya NO se debe poner el nombre __controlador@nombre_metodo__  sino solamente el nombre de la clase, como muestro aqui:
-```php
-Route::get('/where/{mi_parametro}', 'WhereController')
 ```
