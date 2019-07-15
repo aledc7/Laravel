@@ -1,5 +1,12 @@
 ![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
 
+[![aledc.com](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/aledc.com.svg)](https://aledc.com)
+[![ingenea.com.ar](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/ingenea.svg)](http://ingenea.com.ar)
+[![License](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/mit-license.svg)](https://aledc.com)
+[![GitHub release](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/release.svg)](https://aledc.com)
+[![Dependencies](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/dependencias-none.svg)](https://aledc.com)
+
+
 # Lesson 8 - Layouts con Blade
 
 
@@ -73,3 +80,6 @@ Dado que el titulo es una sola línea, podemos pasar el contenido como el segund
 @section('title', "Usuario {$id}")
 ```
 El código que se encuentra entre comillas es PHP y no Blade, por lo que en lugar de utilizar la sintaxis de dobles llaves {{ $id }} utilizaremos {$id} o simplemente $id.
+
+
+[ir a la lección 9 - Bases de Datos](https://github.com/aledc7/Laravel/blob/master/lesson_9_base_de_datos.md)
