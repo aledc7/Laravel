@@ -82,4 +82,4 @@ Dado que el titulo es una sola línea, podemos pasar el contenido como el segund
 El código que se encuentra entre comillas es PHP y no Blade, por lo que en lugar de utilizar la sintaxis de dobles llaves {{ $id }} utilizaremos {$id} o simplemente $id.
 
 
-[ir a la lección 9 - Bases de Datos](https://github.com/aledc7/Laravel/blob/master/lesson_9_base_de_datos.md)
+[ir a la lección 9 --> Bases de Datos](https://github.com/aledc7/Laravel/blob/master/lesson_9_base_de_datos.md)
