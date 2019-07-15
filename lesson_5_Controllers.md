@@ -26,6 +26,8 @@ Si todo fue bien, se tiene que haber creado el archivo:
 ```php
 /app/Http/Controllers/ControladorPrueba.php
 ```
+
+
 Un controlador no es más que un archivo .php con una clase que extiende de la clase App\Http\Controllers\Controller:
 ```php
 <?php
@@ -72,6 +74,95 @@ class ShowController extends Controller
     }
 }
 ```
+
+### Añadiendo el parámetro --resource a la creación de una controladora
+
+Con el comando php artisan make:controller NombreController --resource añadiendole el **--resource**, le creara todos los metodos recomendados por laravel para hacer el crud: index,show,create,store,edit,destroy   
+
+
+### Aquí un ejemplo de la Controladora que se genera al pasarle el aprametro --resource.
+### Observemos que se crearán todos los métodos necesarios para un ABM (CRUD)
+```php
+class pruebaResourcesController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
+````
+
 
 
 ## Enlazar una ruta a un controlador
