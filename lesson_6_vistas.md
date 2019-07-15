@@ -1,5 +1,11 @@
 ![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
 
+[![aledc.com](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/aledc.com.svg)](https://aledc.com)
+[![ingenea.com.ar](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/ingenea.svg)](http://ingenea.com.ar)
+[![License](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/mit-license.svg)](https://aledc.com)
+[![GitHub release](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/release.svg)](https://aledc.com)
+[![Dependencies](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/dependencias-none.svg)](https://aledc.com)
+
 # Lesson 6 - Vistas
 
 ## Crear una vista
@@ -70,3 +76,6 @@ Laravel nos ofrece un helper llamado e que nos permite escapar HTML que podría 
 ```php
 <li><?php echo e($user) ?></li>
 ```
+
+
+[Ir a la lección 7 --> Blade Plantillas](https://github.com/aledc7/Laravel/blob/master/lesson_7_Blade_Plantillas.md)
