@@ -250,3 +250,5 @@ There was 1 error:
 1) Tests\Feature\TesteoRutaTest::whereId
 ErrorException: Undefined variable: paramet11
 ```
+
+[ir a la Leccion 6 --> Vistas](https://github.com/aledc7/Laravel/blob/master/lesson_6_vistas.md)
