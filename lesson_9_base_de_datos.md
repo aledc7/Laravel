@@ -152,9 +152,5 @@ En la lección mencioné que Schema y Route son Facades. En Laravel los Facades 
 
 Puedes aprender más en la lección Qué son los facades y cómo implementarlos en tu proyecto.
 
-En la próxima lección aprenderemos a crear nuestras propias migraciones y a configurar la base de datos.
-
-## Ejercicio
-Crea una base de datos y configura el archivo .env para que puedas ejecutar las migraciones con el comando php artisan migrate.   
-Una vez que lo logres verifica que las tablas se hayan creado con éxito utilizando cualquier administrador de bases de datos.
+[ir a la siguiente leccion -> Modificar Tablas de la Base](https://github.com/aledc7/Laravel/edit/master/lesson_10_modificar_tablas.md)
 
