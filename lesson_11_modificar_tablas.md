@@ -116,6 +116,7 @@ php artisan migrate:rollback
 ```
 
 
+[ir al capitulo 12 -> Claves Foraneas](https://github.com/aledc7/Laravel/blob/master/lesson_12_claves_foraneas.md)
 
 
 
