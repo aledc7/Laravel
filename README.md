@@ -23,7 +23,7 @@ Composer is an application-level package manager for the PHP programming languag
 
 - [x] php 7 installed on your machine
 - [x] console terminal
-- [x] Internet, of course
+
 
 
 you need to have php installed, then you can check if you have it installed with the command:
