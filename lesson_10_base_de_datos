@@ -116,4 +116,4 @@ Utilizando el camando de Artisan __migrate:rollback__ Laravel regresará el últ
 php artisan migrate:rollback
 ````
 
-[Ir a la Siguiente Leccion ->]()
+[Ir a la Siguiente Leccion - Modificar Tablas ->](https://github.com/aledc7/Laravel/blob/master/lesson_11_modificar_tablas.md)
