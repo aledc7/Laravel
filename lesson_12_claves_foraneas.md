@@ -65,10 +65,10 @@ Cuando diseñamos una Base de Datos, suele ser importante tener un campo (o comb
 ## Claves Foráneas
 Para asociar una tabla con otra, vamos a utilizar una clave foránea. Por ejemplo en la tabla de usuarios, utilizaremos el campo __profession_id__, cuyo valor va a ser un identificador (__id__) válido de uno de los registros de la tabla de profesiones. De esta manera asociaremos un registro (fila) la tabla usuarios con un registro (fila) de la tabla de profesiones. En este tipo de relaciones solemos decir que un Usuario pertenece a una Profesión. También podemos decir que una Profesión tiene muchos Usuarios. Puesto que pueden existir 100 usuarios que sean desarrolladores Back-End o 50 usuarios que sean desarrolladores Front-End, cada profesión va a tener asignada muchos usuarios. Por otro lado cada usuario solo puede tener asignada una profesión (aunque en la vida real hay personas que tienen más de una profesión, en nuestro sistema esto no es relevante).   
 
-## ¿Crear migraciones o modificar las ya existentes?
+## Elegir entre Crear nueva Migración o Modificar Existente
 Para evitar que el número de migraciones crezca sin control, puedes modificar las migraciones ya existentes. Ten en cuenta que esto suele ser posible en etapas tempranas del desarrollo donde la Base de Datos no existe en producción y todos los datos son de prueba (no importa destruir y reconstruir la base de datos cada vez). Si luego de 3 meses de lanzar tu proyecto debes agregar un campo a la tabla de usuarios, en este caso te recomendaría crear una migración nueva. Porque así no solo podrás modificar la tabla de usuarios (sin eliminarla y recrearla) sino que además mantendrás un historial de los cambios que se han producido en diferentes versiones de tu aplicación.
 
-## Cambié una migración y ya nada funciona…
+## Problemas al cambiar Migraciones
 En casos donde ejecutar __php artisan migrate:refresh__ y comandos similares, siempre produzca un error, puedes solucionarlo borrando todas las tablas de tu base de datos o ejecutando __php artisan migrate:fresh__.
 
 Ten en cuenta que ejecutar php artisan migrate:fresh va a __eliminar todas las tablas__. Hazlo solamente si no te importa perder los datos (porque solo son de prueba, etc).
