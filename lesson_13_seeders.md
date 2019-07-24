@@ -35,7 +35,7 @@ class ProfessionSeeder extends Seeder
 }
 ````
 
-Para insertar datos, se utilizará el constructor de consultas SQL de Laravel. Este constructor incluye una interfaz fluida para construir y ejecutar consultas a la base de datos. Para ello se llama al método table del Facade DB pasando como argumento el nombre de la tabla con la que se quiere interactuar.   
+Para insertar datos, se utilizará el constructor de consultas SQL de Laravel. Este constructor incluye una interfaz fluida para construir y ejecutar consultas a la base de datos. Para ello se llama al método table del Facade DB pasando como argumento el nombre de la tabla con la que se quiere interactuar.    
 El método __insert__ acepta un array asociativo que reprensetará las columnas y valores que se quieran guardar en la tabla.
 
 Para utilizar el facade DB:: se deberá importar __\Illuminate\Support\Facades\DB__ al principio del archivo:
@@ -50,7 +50,8 @@ use Illuminate\Support\Facades\DB;
 
 
 ## Registrar seeder
-Los seeders son registrados en la clase DatabaseSeeder dentro de database/seeds/DatabaseSeeder.php. Dentro del método run llamamos al método call pasando como argumento el nombre de la clase de nuestro seeder:
+Los seeders son registrados en la clase DatabaseSeeder dentro de database/seeds/DatabaseSeeder.php.  
+Dentro del método run llamamos al método call pasando como argumento el nombre de la clase de nuestro seeder:
 ```php
 class DatabaseSeeder extends Seeder
 {
@@ -61,11 +62,13 @@ class DatabaseSeeder extends Seeder
 }
 ````
 
-En este caso ProfessionSeeder::class devolverá el nombre de la clase. En lugar de utilizar ::class también es posible pasar el nombre de la clase como una cadena de texto 'ProfessionalSeeder'.
+En este caso ProfessionSeeder::class devolverá el nombre de la clase.  
+En lugar de utilizar ::class también es posible pasar el nombre de la clase como una cadena de texto 'ProfessionalSeeder'.
 
 ## Eliminar registros
 
-Es posible que antes de ejecutar un seeder sea necesario eliminar el contenido existente. Para realizar esto se debe utilizar el método __truncate__, que se encarga de vaciar la tabla:
+Es posible que antes de ejecutar un seeder sea necesario eliminar el contenido existente.  
+Para realizar esto se debe utilizar el método __truncate__, que se encarga de vaciar la tabla:
 
 ```php
 class ProfessionSeeder extends Seeder
@@ -99,7 +102,8 @@ php artisan migrate:fresh --seed
 
 Si una tabla tiene una referencia de clave foránea, es necesasrio desactivar la revisión de claves foráneas utilizando un sentencia antes de vaciar dicha tabla (por ejemplo usando el método truncate).
 
-Esto se lograr con la sentencia __SQL SET FOREIGN_KEY_CHECKS=[0|1]__. En Laravel se puede ejecutar dicha sentencia usando el método __DB::statement__ de esta manera:
+Esto se lograr con la sentencia __SQL SET FOREIGN_KEY_CHECKS=[0|1]__.   
+En Laravel se puede ejecutar dicha sentencia usando el método __DB::statement__ de esta manera:
 
 ```php
 class ProfessionSeeder extends Seeder
@@ -115,7 +119,7 @@ class ProfessionSeeder extends Seeder
 }
 ````
 
-Utilizando la misma sentencia pero con el valor __1__ se reactiva la revisión de claves foráneas luego de ejecutar el seeder.  
+Utilizando la misma sentencia pero con el valor __1__ se reactiva la revisión de claves foráneas luego de ejecutar el seeder.    
 En caso de que se quiera vaciar varias tablas a la vez, se deberá utilizar el siguiente código dentro de la clase DatabaseSeeder:
 
 ```php
