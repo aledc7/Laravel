@@ -74,3 +74,4 @@ En casos donde ejecutar __php artisan migrate:refresh__ y comandos similares, si
 Ten en cuenta que ejecutar php artisan migrate:fresh va a __eliminar todas las tablas__. Hazlo solamente si no te importa perder los datos (porque solo son de prueba, etc).
 
 
+[Siguiente Leccion --> Seeders](https://github.com/aledc7/Laravel/blob/master/lesson_13_seeders.md)
