@@ -152,4 +152,4 @@ En la lección mencioné que Schema y Route son Facades. En Laravel los Facades 
 
 Puedes aprender más en la lección Qué son los facades y cómo implementarlos en tu proyecto.
 
-[ir a la siguiente leccion -> Modificar Tablas de la Base](https://github.com/aledc7/Laravel/blob/master/lesson_10_modificar_tablas.md)
+[ir a la siguiente leccion -> Modificar Tablas de la Base](https://github.com/aledc7/Laravel/blob/master/lesson_10_base_de_datos.md)
