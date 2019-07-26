@@ -116,7 +116,7 @@ php artisan migrate:fresh --seed
 
 Si una tabla tiene una referencia de clave foránea, es necesasrio desactivar la revisión de claves foráneas utilizando un sentencia antes de vaciar dicha tabla (por ejemplo usando el método truncate).  
 
-Esto se lograr con la sentencia __SQL SET FOREIGN_KEY_CHECKS=[0|1]__.   
+Esto se lograr con la sentencia sql __SET FOREIGN_KEY_CHECKS = 0;__.   
 En Laravel se puede ejecutar dicha sentencia usando el método __DB::statement__ de esta manera:
 
 ```php
