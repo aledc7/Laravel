@@ -77,7 +77,7 @@ Esta consulta selecciona todos los artículos y luego selecciona todas las contr
 
 Al almacenar contraseñas en una base de datos asegurate de siempre encriptarlas.
 
-## Parametros dinámicos
+## Parametros Dinámicos
 
 Para evitar ataques de inyección de SQL podemos utilizar parámetros dinámicos.  
 Laravel utiliza internamente el componente PDO de PHP y debido a esto podemos colocar marcadores en nuestra consulta.  
@@ -94,7 +94,7 @@ DB::insert('INSERT INTO professions (title) VALUES (:title)', ['title' => 'Desar
 
 Al hacer esto estaremos protegidos de ataques de inyección de SQL puesto que los parámetros dinámicos serán escapados de forma automática y segura.
 
-## Método select
+## Método Select
 Utilizando el método __DB::select__ podemos construir una consulta __SELECT__ de SQL de forma manual:
 
 ```php
@@ -113,7 +113,7 @@ El resultado de esta consulta es un objeto de la clase __Illuminate\Support\Coll
 $professions->first(); // en vez de $professions[0]
 ````
 
-## Consultas con condicionales (WHERE)
+## Consultas con Condicionales (WHERE)
 El constructor de consultas también nos permite realizar consultas condicionales utilizando where:
 
 ```php
@@ -134,7 +134,7 @@ where(['title' => 'Desarrollador back-end'])
 ````
 
 
-## Métodos dinámicos
+## Métodos Dinámicos
 También podemos utilizar métodos dinámicos:
 
 ```php
@@ -143,7 +143,7 @@ $profession = DB::table('professions')->whereTitle('Desarrollador back-end')->fi
 
 En este caso whereTitle es lo equivalente a escribir where('title', '=', 'Desarrollador back-end').
 
-## Omitir el método select de DB::table
+## Omitir el método Select de DB::table
 Omitiendo el método select al utilizar __DB::table__ podemos retornar todas las columnas:
 
 ```php
