@@ -174,4 +174,4 @@ DB::table('users')->insert([
 ]);
 ```
 
-[Ir a la siguiente leccion -->]()
+[Ir a la siguiente leccion -->](https://github.com/aledc7/Laravel/blob/master/lesson_14_constructor_consultas.md)
