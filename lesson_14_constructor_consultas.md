@@ -31,7 +31,7 @@ Aunque __DB::insert__ nos da el mismo resultado que __DB::table__, cuando realiz
 dd() es una función que permite debuggear para ver el contenido de variables,  se le pasa adentro el objeto que se quera visualizar
 
 ```php
-db($nombre_Variable)
+db($nombre_Variable);
 ````
 El código de arriba, al ejecutar __php artisan db:seed__  mostrará en terminal el contenido de la variable pasada.
 
@@ -43,7 +43,7 @@ $professions1 = DB::select('SELECT id FROM professions where titulo = "Desarroll
 Luego utilizando db($variable) voy a debuggear para ver lo que haya dentro
 
 ```php
-db($professions1)
+db($professions1);
 ````
 
 la respuesta debería ser como la siguiente:
