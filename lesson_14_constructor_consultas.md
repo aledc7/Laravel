@@ -26,6 +26,27 @@ DB::insert('INSERT INTO professions (title) VALUES ("Desarrollador back-end")');
 
 Aunque __DB::insert__ nos da el mismo resultado que __DB::table__, cuando realizamos consultas de este tipo y recibimos datos ingresados por un usuario debemos tener mucho cuidado, ya que nos exponemos a ataques de inyección de SQL.
 
+## Debuggeando con dd()
+
+dd() es una función que permite debuggear para ver el contenido de variables,  se le pasa adentro el objeto que se quera visualizar
+
+```php
+db($nombre_Variable)
+````
+El código de arriba, al ejecutar __php artisan db:seed__  mostrará en terminal el contenido de la variable pasada.
+
+```php
+ php artisan db:seed
+Seeding: ProfessionSeeder
+Seeding: UserSeeder
+array:1 [
+  0 => {#569
+    +"id": 3
+  }
+]
+````
+
+
 ## Inyección de SQL
 Nuestro código es vulnerable a inyecciones de SQL cuando insertamos variables dentro de una solicitud de SQL. Por ejemplo, si tuvieras una consulta donde seleccionas una serie de articulos dependiendo de un autor:
 ```php
