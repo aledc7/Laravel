@@ -35,6 +35,19 @@ db($nombre_Variable)
 ````
 El código de arriba, al ejecutar __php artisan db:seed__  mostrará en terminal el contenido de la variable pasada.
 
+Primero guardo en una variable una consulta a la base de datos:
+```php
+$professions1 = DB::select('SELECT id FROM professions where titulo = "Desarrollador BackEend"');
+````
+
+Luego utilizando db($variable) voy a debuggear para ver lo que haya dentro
+
+```php
+db($professions1)
+````
+
+la respuesta debería ser como la siguiente:
+
 ```php
  php artisan db:seed
 Seeding: ProfessionSeeder
