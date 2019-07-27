@@ -150,4 +150,4 @@ Omitiendo el método select al utilizar __DB::table__ podemos retornar todas las
 $profession = DB::table('professions')->where('title', '=', 'Desarrollador back-end')->first();
 ````
 
-[Ir al siguiente capìtulo -->]()
+[Ir al siguiente capìtulo -->](https://github.com/aledc7/Laravel/blob/master/lesson_15_introduccion_a_Eloquent.md)
