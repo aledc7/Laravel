@@ -231,6 +231,20 @@ Esta es la lista casi completa:
                 $table->uuid('id');  //	UUID equivalent for the database.
 ```
 
+## Modificadores
+
+Estos son los modificadores disponibles para cuando se desea especificar un campo null, u otras propiedades:
+```php
+->after('column')	Place the column "after" another column (MySQL Only)
+->comment('my comment')	Add a comment to a column
+->default($value)	Specify a "default" value for the column
+->first()	Place the column "first" in the table (MySQL Only)
+->nullable()	Allow NULL values to be inserted into the column
+->storedAs($expression)	Create a stored generated column (MySQL Only)
+->unsigned()	Set integer columns to UNSIGNED
+->virtualAs($expression)	Create a virtual generated column (MySQL Only)
+```
+
 
 
 
