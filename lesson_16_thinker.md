@@ -114,6 +114,77 @@ Luego se podrá usar __User::findbyEmail('info@aledc.com') para buscar a un usua
 
 
 
+## Leer y asignar Atributos
+Con Eloquent, todos los atributos de un modelo (o columnas de un registro) son tratados como si de propiedades públicas de la clase que se tratasen.   
+Por ejemplo si quieres obtener el nombre de un usuario almacenado en la variable $user, se podrá escribir: __$user->name__; // obtiene el nombre del usuario.
+
+Para re-asignar otro nombre se hace mediante __$user->name = 'Aledc'__;
+
+Estos cambios no serán guardados automáticamente en la tabla de usuarios en la base de datos, sino que necesitas ejecutar el método save para hacer esto:
+
+```php
+$user->save(); //inserta o actualiza el usuario en la base de datos
+````
+
+
+Eloquent detectará si debe ejecutar un INSERT o un UPDATE dependiendo si el usuario existe o no, respectivamente.
+
+La propiedad __exists__ de Eloquent, nos permite averiguar si un modelo existe o no, ejemplo: 
+__$user->exists__ //devuelve TRUE si el usuario ya existe en la base de datos, FALSE de lo contrario.  
+
+
+## Evitar fallos de seguridad por asignación masiva de datos
+
+La excepción __MassAssignmentException__ es una forma en la que el ORM protege la aplicación.  
+Una vulnerabilidad de asignación masiva ocurre cuando un usuario envía un parametro inesperado mediante una solicitud y dicho parametro realiza un cambio en la base de datos que no se esperaban.  
+Por ejemplo, un usuario podría, utilizando Chrome Developer Tools o herramientas similares, agregar un campo oculto llamado __is_admin__ con el valor de 1 y enviar la solicitud de registro de esta manera.   
+Si no se tiene cuidado con esto entonces cualquier usuario podría convertirse en administrador de la aplicación, con consecuencias nefastas para tu sistema.  
+
+Para evitar esto, dentro del modelo se debe agregar la propiedad __$fillable__ y asignarle como valor un array con las columnas que se quieren permitir que puedan ser cargadas de forma masiva:
+
+```php
+class User extends Model
+{
+    protected $fillable = ['name', 'password', 'email'];
+}
+````
+
+También esa disponible la propiedad __$guarded__. Al igual que __$fillable__, esta propiedad tendrá como valor un array, pero en este caso las columnas que se indican son las que no se quiere que puedan ser cargadas de forma masiva:
+
+```php
+class User extends Model
+{
+    protected $guarded = ['is_admin'];
+}
+````
+
+## Asignar un campo no fillable
+Para asignar un valor a un campo que no está dentro de __$fillable__, se puede asignar una nueva instancia de un modelo en una variable y luego asignar el campo de forma manual:
+
+```php
+$user = new User(['name' => 'Duilio', 'password' => bcrypt('123')]);
+
+$user->is_admin = true;
+
+$user->save();
+````
+
+
+Se puede observar que __new User($datos)__ solo crea un nuevo modelo sin persistirlo en la base de datos VS __User::create($datos)__ que crea un nuevo modelo y lo inserta en la base de datos en un solo paso.   
+
+## Convertir atributos
+La propiedad __$casts__ permite convertir atributos a diferentes tipos de datos dentro de un modelo. __$casts__ recibe como valor un array donde la llave es el nombre del atributo que será convertido y el valor el tipo al que lo se quiera convertir:
+
+```php
+protected $casts = [
+    'is_admin' => 'boolean'
+];
+````
+
+En este caso se convertirá la propiedad __is_admin__ a boolean.
+
+
+
 
 
 [Ir a la siguiente lección -->]()
