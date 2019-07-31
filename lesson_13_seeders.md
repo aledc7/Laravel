@@ -246,6 +246,41 @@ Estos son los modificadores disponibles para cuando se desea especificar un camp
 ```
 
 
+## Crear Seeder a partir de una exportacion de archivo .sql
+
+Este método permite, importar los insert en una o varias tablas, creadas previamente con una migración.
+
+1 - Primeramente se exporta la tabla o  base de datos que se quiera generar el seeder, y generar el archivo .sql
+2 - Editar el archivo, borrarle todo y dejarle solo a partir de INSERT INTO
+3 - Copiar el archivo dentro del proyecto, en la carpeta seeder, (solo para mantener el orden, por supuesto.)
+4 - crear un nuevo seeder y ponerle el siguiente código (se usa la funcion __file_get_contents__.
+
+
+__Así debe quedar el seeder completo__
+
+```php
+<?php
+
+use App\Persona;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+
+class PersonaSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {        
+            $sql = file_get_contents(database_path() . '/seeds/personas.sql');    
+            DB::statement($sql);
+    }
+}
+````
+
 
 
 
