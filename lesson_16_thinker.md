@@ -187,4 +187,4 @@ En este caso se convertirá la propiedad __is_admin__ a boolean.
 
 
 
-[Ir a la siguiente lección -->](https://github.com/aledc7/Laravel/blob/master/lesson_17_relaciones.md)
+[Ir a la siguiente lección --> Relaciones (Belong To)](https://github.com/aledc7/Laravel/blob/master/lesson_17_relaciones.md)
