@@ -1,0 +1,83 @@
+![Laravel](https://raw.githubusercontent.com/aledc7/Laravel/master/pirullo.png "Aledc.com")
+
+[![aledc.com](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/aledc.com.svg)](https://aledc.com)
+[![ingenea.com.ar](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/ingenea.svg)](http://ingenea.com.ar)
+[![License](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/mit-license.svg)](https://aledc.com)
+[![GitHub release](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/release.svg)](https://aledc.com)
+[![Dependencies](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/dependencias-none.svg)](https://aledc.com)
+
+# Capitulo 17 - Relaciones «Pertenece a»
+
+
+El método belongsTo permite trabajar con relaciones donde un registro pertenece a otro registro.  
+Este método acepta como primer argumento el nombre de la clase que se quiera vincular.   
+Eloquent determina el nombre de la llave foránea a partir del nombre del método (en este caso profession) y agregando el sufijo _id a este:
+
+```php
+public function profession()
+{
+    return $this->belongsTo(Profession::class);
+}
+````
+
+Si en la base de datos el nombre de la llave foránea no sigue esta convención de id, es posible pasar el nombre de la columna como segundo argumento:
+
+```php
+public function profession()
+{
+    return $this->belongsTo(Profession::class, 'id_profession');
+}
+````
+
+Por otro lado, si el modelo padre no usa una columna id como su llave primaria o se quiere relacionar el modelo a una columna diferente, en ese caso de debera pasar un tercer argumento especificando el nombre de la columna que actuaría como llave del modelo padre:
+
+```php
+public function profession()
+{
+    return $this->belongsTo(Profession::class, 'profession_name', 'name');
+}
+````
+
+En este caso Eloquent buscará la relación entre la columna __profession_name__ del modelo Users y la columna __name__ del modelo __Profession__.
+
+Hecho esto, utilizando cualquiera de las formas anteriores, se puede obtener la profesión del usuario:
+
+```php
+$user = User::first();
+$user->profession;
+````
+
+## Relaciones uno a muchos con hasMany
+
+Una relación uno a muchos es utilizada cuando un modelo puede tener muchos otros modelos relacionados.  
+Por ejemplo, una profesión puede tener un número indeterminado de usuarios asociados a ésta.  
+Dentro del modelo __Profession__ podemos decir que una profesión tiene muchos usuarios:
+
+
+```php
+public function users()
+{
+    return $this->hasMany(User::class);
+}
+````
+
+
+Ahora es posible entrar a Thinker y obtener todos los usuarios de una profesión:
+
+```php
+$profession = Profession:first();
+$profession->users;
+````
+
+Los métodos que permiten relacionar un modelo con muchos otros siempre van a retornar una colección, así esté vacía y los métodos que permiten relacionar un modelo con otro van a retornar el modelo o null.
+
+## Construir consultas
+Es posible construir una consulta llamando al método de una relación.  
+Por ejemplo, encadenando el método __where()__ a __users()__ es posible obtener todos los usuarios asociados a una profesión pero que tengan la columna __is_admin__ como __true__:
+
+```php
+$profession->users()->where('is_admin', true)->get();
+````
+
+
+
