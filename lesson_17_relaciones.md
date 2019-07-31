@@ -9,9 +9,9 @@
 # Capitulo 17 - Relaciones «Pertenece a»
 
 
-El método belongsTo permite trabajar con relaciones donde un registro pertenece a otro registro.  
+El método __belongsTo__ permite trabajar con relaciones donde un registro pertenece a otro registro.  
 Este método acepta como primer argumento el nombre de la clase que se quiera vincular.   
-Eloquent determina el nombre de la llave foránea a partir del nombre del método (en este caso profession) y agregando el sufijo _id a este:
+Eloquent determina el nombre de la llave foránea a partir del nombre del método (en este caso profession) y agregando el sufijo **_id** a este:
 
 ```php
 public function profession()
@@ -20,7 +20,7 @@ public function profession()
 }
 ````
 
-Si en la base de datos el nombre de la llave foránea no sigue esta convención de id, es posible pasar el nombre de la columna como segundo argumento:
+Si en la base de datos el nombre de la llave foránea no sigue esta convención de __id__, es posible pasar el nombre de la columna como segundo argumento:
 
 ```php
 public function profession()
@@ -29,7 +29,7 @@ public function profession()
 }
 ````
 
-Por otro lado, si el modelo padre no usa una columna id como su llave primaria o se quiere relacionar el modelo a una columna diferente, en ese caso de debera pasar un tercer argumento especificando el nombre de la columna que actuaría como llave del modelo padre:
+Por otro lado, si el modelo padre no usa una columna __id__ como su llave primaria o se quiere relacionar el modelo a una columna diferente, en ese caso de debera pasar un tercer argumento especificando el nombre de la columna que actuaría como llave del modelo padre:
 
 ```php
 public function profession()
@@ -38,7 +38,7 @@ public function profession()
 }
 ````
 
-En este caso Eloquent buscará la relación entre la columna __profession_name__ del modelo Users y la columna __name__ del modelo __Profession__.
+En este caso Eloquent buscará la relación entre la columna __profession_name__ del modelo __Users__ y la columna __name__ del modelo __Profession__.
 
 Hecho esto, utilizando cualquiera de las formas anteriores, se puede obtener la profesión del usuario:
 
@@ -47,11 +47,11 @@ $user = User::first();
 $user->profession;
 ````
 
-## Relaciones uno a muchos con hasMany
+## Relaciones Uno a Muchos con hasMany
 
 Una relación uno a muchos es utilizada cuando un modelo puede tener muchos otros modelos relacionados.  
 Por ejemplo, una profesión puede tener un número indeterminado de usuarios asociados a ésta.  
-Dentro del modelo __Profession__ podemos decir que una profesión tiene muchos usuarios:
+Dentro del modelo __Profession__ se puede decir que una __profesión__ tiene muchos __usuarios__:
 
 
 ```php
@@ -62,22 +62,23 @@ public function users()
 ````
 
 
-Ahora es posible entrar a Thinker y obtener todos los usuarios de una profesión:
+Ahora es posible entrar a la terminal de Thinker y obtener todos los usuarios de una profesión:
 
 ```php
 $profession = Profession:first();
 $profession->users;
 ````
 
-Los métodos que permiten relacionar un modelo con muchos otros siempre van a retornar una colección, así esté vacía y los métodos que permiten relacionar un modelo con otro van a retornar el modelo o null.
+Los métodos que permiten relacionar un modelo con muchos otros siempre van a retornar una colección, así esté vacía y los métodos que permiten relacionar un modelo con otro van a retornar el modelo o __null__.
 
-## Construir consultas
+## Construir Consultas
 Es posible construir una consulta llamando al método de una relación.  
-Por ejemplo, encadenando el método __where()__ a __users()__ es posible obtener todos los usuarios asociados a una profesión pero que tengan la columna __is_admin__ como __true__:
+
+Por ejemplo, encadenando el método __where()__ a __users()__ es posible obtener todos los __usuarios__ asociados a una __profesión__ pero que tengan la columna __is_admin__ como __true__:
 
 ```php
 $profession->users()->where('is_admin', true)->get();
 ````
 
-
+[Siguiente Leccón -->]()
 
