@@ -110,7 +110,7 @@ public static function findByEmail($email)
 
 Luego se podrá usar __User::findbyEmail('info@aledc.com') para buscar a un usuario por el campo email y obtener un objeto User como resultado (o null si no se encuentra ningún registro).
 
-[Lista con todos los métodos -->](https://laravel.com/docs/5.5/eloquent-collections#available-methods)
+[Lista con todos los métodos](https://laravel.com/docs/5.5/eloquent-collections#available-methods)
 
 
 
