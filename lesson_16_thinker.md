@@ -127,17 +127,17 @@ $user->save(); //inserta o actualiza el usuario en la base de datos
 ````
 
 
-Eloquent detectará si debe ejecutar un INSERT o un UPDATE dependiendo si el usuario existe o no, respectivamente.
+Eloquent detectará si debe ejecutar un __INSERT__ o un __UPDATE__ dependiendo si el usuario existe o no, respectivamente.
 
 La propiedad __exists__ de Eloquent, nos permite averiguar si un modelo existe o no, ejemplo: 
-__$user->exists__ //devuelve TRUE si el usuario ya existe en la base de datos, FALSE de lo contrario.  
+__$user->exists__ //devuelve __TRUE__ si el usuario ya existe en la base de datos, __FALSE__ de lo contrario.  
 
 
 ## Evitar fallos de seguridad por asignación masiva de datos
 
 La excepción __MassAssignmentException__ es una forma en la que el ORM protege la aplicación.  
 Una vulnerabilidad de asignación masiva ocurre cuando un usuario envía un parametro inesperado mediante una solicitud y dicho parametro realiza un cambio en la base de datos que no se esperaban.  
-Por ejemplo, un usuario podría, utilizando Chrome Developer Tools o herramientas similares, agregar un campo oculto llamado __is_admin__ con el valor de 1 y enviar la solicitud de registro de esta manera.   
+Por ejemplo, un usuario podría, utilizando Chrome Developer Tools o herramientas similares, agregar un campo oculto llamado __is_admin__ con el valor de __1__ y enviar la solicitud de registro de esta manera.   
 Si no se tiene cuidado con esto entonces cualquier usuario podría convertirse en administrador de la aplicación, con consecuencias nefastas para tu sistema.  
 
 Para evitar esto, dentro del modelo se debe agregar la propiedad __$fillable__ y asignarle como valor un array con las columnas que se quieren permitir que puedan ser cargadas de forma masiva:
@@ -162,7 +162,7 @@ class User extends Model
 Para asignar un valor a un campo que no está dentro de __$fillable__, se puede asignar una nueva instancia de un modelo en una variable y luego asignar el campo de forma manual:
 
 ```php
-$user = new User(['name' => 'Duilio', 'password' => bcrypt('123')]);
+$user = new User(['name' => 'Alejandro DC', 'password' => bcrypt('Pirulo')]);
 
 $user->is_admin = true;
 
