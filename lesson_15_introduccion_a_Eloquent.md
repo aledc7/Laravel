@@ -98,4 +98,4 @@ $profession = Profession::find(1);
 
 
 
-[Ir a la lecciion Thiker -->](https://github.com/aledc7/Laravel/blob/master/lesson_16_thinker.md)
+[Siguiente lecciion Thiker -->](https://github.com/aledc7/Laravel/blob/master/lesson_16_thinker.md)
