@@ -8,11 +8,12 @@
 
 # Capitulo 16 - Usando Eloquent ORM de forma Interactiva con Tinker
 
-Laravel cuenta con una consola dinámica llamada __Tinker__.  Esta terminal permite usar métodos de Eloquent para interactuar con los modelos.
+Laravel cuenta con una consola dinámica llamada __Tinker__.   
+Esta terminal permite usar métodos de Eloquent para interactuar con los modelos.
 
 
 ## Acceder a Tinker
-Podemos acceder al entorno con el comando de Artisan tinker:
+Para acceder al entorno con el comando de Artisan tinker:  
 
 ```php
 php artisan tinker
@@ -31,7 +32,8 @@ $professions = Profession::all();
 
 Los métodos __all()__ y __get()__ en Eloquent retornan colecciones (objetos de la clase Illuminate\Database\Eloquent\Collection) las cuales «envuelven» el array de resultados y proveen de funciones y métodos adicionales, por ejemplo:
 
-Podemos obtener el primer resultado utilizando el método __first()__ y el último utilizando el método __last()__. También es posible obtener un resultado aleatorio utilizando el método __random()__:
+Es posible obtener el primer resultado utilizando el método __first()__ y el último utilizando el método __last()__.   
+También es posible obtener un resultado aleatorio utilizando el método __random()__:
 
 ```php
 $profession->first(); // Obtenemos el primer resultado
@@ -43,14 +45,15 @@ $profession->random(1); // Obtenemos un resultado aleatorio
 
 Estos métodos de la clase Collection no generan nuevas consultas SQL sino que operan sobre los resultados ya encontrados.
 
-## Seleccionar un campo con el método __pluck()__
-Utilizando el método __pluck()__ es posible retornar una nueva colección que contenga un listado de un solo campo en vez de un listado de objetos. Por ejemplo, es posible obtener solo el campo title de la siguiente forma:
+## Seleccionar un campo con el método __pluck()__   
+Utilizando el método __pluck()__ es posible retornar una nueva colección que contenga un listado de un solo campo en vez de un listado de objetos.   
+Por ejemplo, es posible obtener solo el campo title de la siguiente forma:
 
 ```php
 $professions->pluck('title');
 ````
 
-Devuelve:
+Esto devolverá:    
 ```php
 => Illuminate\Support\Collection {#736
      all: [
