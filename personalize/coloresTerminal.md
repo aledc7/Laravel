@@ -6,7 +6,7 @@
 [![GitHub release](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/release.svg)](https://aledc.com)
 [![Dependencies](https://github.com/aledc7/Scrum-Certification/blob/master/recursos/dependencias-none.svg)](https://aledc.com)
 
-# Personalizar los errores del Tinker
+# Personalizar Color de fuente de los errores del Tinker
 
 Tinker tiene configurado el color de la fuente GRIS con fondo ROJO...  esto es un error de alguien, ya que no es cómodo ni legible.
 
