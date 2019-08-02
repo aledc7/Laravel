@@ -17,7 +17,9 @@ para corregir esto es necesario editar dentro de cada proyecto el archivo __Shel
 ```php
 ./vendor/psy/psysh/src/Output/ShellOutput.php
 
-178://$formatter->setStyle('error', new OutputFormatterStyle('black', 'red', ['bold']));
-178:$formatter->setStyle('error', new OutputFormatterStyle('black', 'white', ['bold']));
+# En la linea 178 comentarla y poner esta otra:
+
+//$formatter->setStyle('error', new OutputFormatterStyle('black', 'red', ['bold']));
+$formatter->setStyle('error', new OutputFormatterStyle('black', 'white', ['bold']));
 ````
 
