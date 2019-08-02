@@ -17,9 +17,9 @@ para corregir esto es necesario editar dentro de cada proyecto el archivo __Shel
 ```php
 ./vendor/psy/psysh/src/Output/ShellOutput.php
 
-# En la linea 178 comentarla y poner esta otra:
+# En la linea 178 cambiar 'red' por 'white'
 
-//$formatter->setStyle('error', new OutputFormatterStyle('black', 'red', ['bold']));
+// $formatter->setStyle('error', new OutputFormatterStyle('black', 'red', ['bold']));
 $formatter->setStyle('error', new OutputFormatterStyle('black', 'white', ['bold']));
 ````
 
