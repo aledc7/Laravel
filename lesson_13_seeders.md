@@ -229,6 +229,7 @@ Esta es la lista casi completa:
                 $table->unsignedSmallInteger('votes');  //	Unsigned SMALLINT equivalent for the database.
                 $table->unsignedTinyInteger('votes');  //	Unsigned TINYINT equivalent for the database.
                 $table->uuid('id');  //	UUID equivalent for the database.
+                $table->timestamp('au_fecha_hora'); // inserta fecha y hora actual
 ```
 
 ## Modificadores
