@@ -11,13 +11,13 @@
 Se explicará como crear una tabla a traves de las __migrations__, luego crear el __model__ correspondiente a esa tabla, y por ultimo cargar datos en la tabla, a traves de los __seeders__.
 
 
-1 -   Lo primero será crear la __migration__ con el nombre de la tabla que queremos crear, es fundamental que el nombre contenga las palabras __create__ y __table__
+1. -   Lo primero será crear la __migration__ con el nombre de la tabla que queremos crear, es fundamental que el nombre contenga las palabras __create__ y __table__
 
 ```php
 php artisan make:migration create_nombredelatabla_table
 ````
 
-1.2 - Editar la migración recien creada en /database/migrations, y completar con la estructura de la tabla que queremos crear:
+1.2. - Editar la migración recien creada en /database/migrations, y completar con la estructura de la tabla que queremos crear:
 
 ```php
 Schema::create('users', function (Blueprint $table) {
@@ -35,11 +35,11 @@ Schema::create('users', function (Blueprint $table) {
             $table->timestamp('au_fecha_hora');
         });
 ````
-2 - Crear el Modelo que corresponderá a la tabla creada en el paso 1:
+2. - Crear el Modelo que corresponderá a la tabla creada en el paso 1:
 ```php
 php artisan make:model NombreModelo
 ````
-2.1 - Una vez creado el modelo, editarlo y se debe especificar el nombre exacto de la tabla, e indicar que se usará ese modelo:
+2.1. - Una vez creado el modelo, editarlo y se debe especificar el nombre exacto de la tabla, e indicar que se usará ese modelo:
 
 ```php
 namespace App;
@@ -54,12 +54,12 @@ class Menu extends Model
 
 ````
 
-3 - Una vez tenemos creada la migración y el modelo, creamos el seeder:
+3. - Una vez tenemos creada la migración y el modelo, creamos el seeder:
 ```php
 php artisan make:seeder NombretablaSeeder
 ```
 
-3.1 - Luego editamos el seeder que se habrá generado en la carpeta /database/seeds/  y tenemos que indicarle que use el modelo que ceamos en el paso 2. 
+3.1. - Luego editamos el seeder que se habrá generado en la carpeta /database/seeds/  y tenemos que indicarle que use el modelo que ceamos en el paso 2. 
 Se muestra como ejemplo un seeder para crear la tabla de profesiones
 
 ```php
@@ -112,7 +112,7 @@ class ProfessionSeeder extends Seeder
 }
 ````
 
-3.2 - Luego de editado el archivo del seeder, es necesario registrar el seeders en el archivo __DatabaseSeeder.php__
+3.2. - Luego de editado el archivo del seeder, es necesario registrar el seeders en el archivo __DatabaseSeeder.php__
 
 ```php
     public function run()
@@ -124,7 +124,7 @@ class ProfessionSeeder extends Seeder
     }
 ```
 
-4 - Finalmente puedo correr las migraciones y los seeders con este comando:
+4. - Finalmente puedo correr las migraciones y los seeders con este comando:
 ATENCION: El parámetro __fresh__ vaciará todas las tablas,  nunca hacer en producción
 ```php
 php artisan migrate:fresh --seed
