@@ -89,8 +89,10 @@ public function up()
         $table->rememberToken();
         $table->timestamps();
         
-        # Aca relaciono la tabla
+        # Aca relaciono la tabla, primeramente definiendo el campo unsigned
         $table->integer('tipodocumento')->unsigned();
+        
+        # Luego hago la relación, indicando el campo local, luego el campo de la tabla foranea, y por último el nombre de la tabla
         $table->foreign('tipodocumento')->references('tipodocumento')->on('tiposdocumento')
                 ->onUpdate('cascade')->onDelete('cascade');
     });
