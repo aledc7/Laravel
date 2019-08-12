@@ -88,6 +88,11 @@ public function up()
         $table->string('password');
         $table->rememberToken();
         $table->timestamps();
+        
+        # Aca relaciono la tabla
+        $table->integer('tipodocumento')->unsigned();
+        $table->foreign('tipodocumento')->references('tipodocumento')->on('tiposdocumento')
+                ->onUpdate('cascade')->onDelete('cascade');
     });
     
 ```
