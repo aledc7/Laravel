@@ -133,8 +133,63 @@ factory(User::class)->times(48)->create();
 ````
 
 
-Aquí encontrarás toda la documentación del Faker :point_down:   
 
+
+
+Recapitulando, estos son los pasos completos para generar el Factory, Modelo, Migracion y Seeder.
+
+1. - Crear Modelo, Migración y Factory con el siguiente comando:
+```php
+php artisan make:model Nombre -mf
+````
+2. - Crear el Seeder 
+```php
+php artisan make:seed
+````
+2.1 - Registrar el seeder recien creado en el archivo __DatabaseSeeder.php__   
+2.2 - Dentro del Seeder recien creado, se debe llamar al modelo que se creó en el paso 1    
+
+```php
+use App\NombreModelo;
+````
+
+2.3 - Luego en el Seeder se debe llamar a la funcion del Factory   
+```php
+factory(OtroTest::class,20)->create();
+````
+3. - Editar la Migración generada, editando las columnas necesarias
+4. - Editar el archivo Factory, agregando los fakes necesarios, y haciendo coincidir los campos con los de la migracion.
+```php
+$factory->define(App\User::class, function (Faker $faker) {
+    return [
+        'name' => $faker->firstNameMale,
+        'lastname' => $faker->lastname,
+        'email' => $faker->safeEmail,
+        'password' => $faker->bankAccountNumber,
+        'remember_token' => str_random(10),       
+        'direccion'=> $faker->address,
+        'cuit' => $faker->randomNumber,
+        'email'=> $faker->companyEmail,
+        'telefono'=> $faker->e164PhoneNumber,
+        'password' => bcrypt('mi_contraseña'),
+        'notas' => $faker->text($maxNbChars = 20),
+        'dni' => $faker->ean8
+    ];
+});
+````
+
+5. - Por ultimo, solo resta ejecutar las migraciones y refrescar todo para que borre todas las tablas:
+```php
+php artisan migrate:fresh --seed
+````
+
+
+
+
+
+
+
+Aquí encontrarás toda la documentación del Faker :point_down:   
 [Documentación del componente Faker](https://github.com/fzaninotto/Faker)  
 
 
