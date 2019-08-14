@@ -136,7 +136,9 @@ factory(User::class)->times(48)->create();
 
 
 
-Recapitulando, estos son los pasos completos para generar el Factory, Modelo, Migracion y Seeder.
+# Recapitulando
+
+Estos son los pasos completos para generar el Factory, Modelo, Migracion y Seeder.
 
 1. - Crear Modelo, Migración y Factory con el siguiente comando:
 ```php
