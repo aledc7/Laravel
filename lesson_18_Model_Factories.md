@@ -44,6 +44,11 @@ por ejemplo:
 php artisan make:model Skill -mf
 ````
 
+Utilizando el comando de arriba :point_up: solo restaría crear el seeder y adentro indicarle que use el factory creado:    
+```php
+factory(Skill::class,20)->create();)
+````
+
 Utilizando el componente de __PHP Faker__ indicamos que el valor de 'titulo' será una oración aleatoria:
 
 ```php
