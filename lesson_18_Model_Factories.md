@@ -44,17 +44,20 @@ por ejemplo:
 php artisan make:model Skill -mf
 ````
 
-Utilizando el componente de __PHP Faker__ indicamos que el valor de title será una oración aleatoria:
+Utilizando el componente de __PHP Faker__ indicamos que el valor de 'titulo' será una oración aleatoria:
 
 ```php
 $factory->define(\App\Profession::class, function (Faker $faker) {
     return [
-        'title' => $faker->sentence
+        'titulo' => $faker->sentence
     ];
 });
 ````
 
-Pasando un número como primer argumento a __sentence__ podemos indicar el número de palabras que queremos que contenga la oración: __$faker->sentence(3)__. Esto devolverá oraciones con 2, 3 o 4 palabras, o si queremos estrictamente que sean 3 palabras podemos llamar al método de esta forma: __$faker->sentence(3, false)__  
+Pasando un número como primer argumento a __sentence__ se puede indicar el número de palabras que tendrá la oración: __$faker->sentence(3)__.  
+Esto devolverá oraciones de 2, 3 o 4 palabras, o si se quiere especificamente que sean solo 3 palabras se puede llamar al método de esta forma: __$faker->sentence(3, false)__  .
+El agregado de __false__ le sacará la aleatoriedad de hacer las oraciones con 1,2 o 3.   
+
 
 
 ## Componente Faker
@@ -84,25 +87,26 @@ $faker->cellphone;
 
 
 #  Utilizar un Model Factory
-Para utilizar un Model Factory debemos llamar al helper factory, especificando el nombre del modelo como argumento y finalmente encadenando el llamado al método create.
+Para utilizar un Model Factory se debe llamar al __helper factory__, especificando el nombre del modelo como argumento y finalmente encadenando el llamado al método __create__.
 
 ```php
 factoy(User::class())->create();
 ````
 
-Esto va a crear un usuario en la base de datos y va a retornar el modelo en cuestión, en este caso un objeto de la clase User:
+Esto va a crear un usuario en la Base de datos y va a retornar el modelo en cuestión, en este caso un objeto de la clase User:
 
 ```php
 App\User {
-    name: "Jazmyne Romaguera",
-    email: "ciara.willms@example.com",
-    updated_at: "2017-11-24 15:55:32",
-    created_at: "2017-11-24 15:55:32",
-    id: 4,
+    name: "Alejandro De Castro",
+    email: "aledc@example.com",
+    updated_at: "2019-08-14 09:52:15",
+    created_at: "2019-08-14 09:52:15",
+    id: 7,
 ````
 
 
-Cada vez que ejecutamos el método __create()__ creamos un nuevo registro aleatorio. Si pasamos un array asociativo al método create() podemos sobrescribir o asignar propiedades extras:
+Cada vez que se ejecute el método __create()__ se creará un nuevo registro aleatorio.  
+ Si se pasa un array asociativo al método create() se puede sobrescribir o asignar propiedades extras:
 
 ```php
 factory(User::class)->create([
@@ -110,21 +114,21 @@ factory(User::class)->create([
 ]);
 ````
 
-Para cargar un determinado número de registros pasamos como segundo argumento la cantidad que queremos crear:
+Para cargar un determinado número de registros se debe pasar como segundo argumento la cantidad que se quiera crear:
 
 ```php
 factory(User::class, 48)->create();
 ````
 
 
-También podemos lograrlo utilizando el método times():
+También es posible lograr esto utilizando el método __times()__:
 
 ```php
 factory(User::class)->times(48)->create();
 ````
 
 
-Material relacionado
+Aquí encontrarás toda la documentación del Faker :point_down:   
 (Documentación del componente Faker)[https://github.com/fzaninotto/Faker]
 
 
