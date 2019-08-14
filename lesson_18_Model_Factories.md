@@ -130,7 +130,7 @@ factory(User::class)->times(48)->create();
 
 Aquí encontrarás toda la documentación del Faker :point_down:   
 
-()[https://github.com/fzaninotto/Faker]  
+[Documentación del componente Faker](https://github.com/fzaninotto/Faker)  
 
 
 
