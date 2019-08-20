@@ -194,7 +194,7 @@ Esta es la lista casi completa:
                 $table->dateTimeTz('created_at');  //	DATETIME (with timezone) equivalent for the database.
                 $table->decimal('amount', 5, 2);  //	DECIMAL equivalent with a precision and scale.
                 $table->double('column', 15, 8);  //	DOUBLE equivalent with precision, 15 digits in total and 8 after the decimal point.
-                $table->enum('choices', ['foo', 'bar']);  //	ENUM equivalent for the database.
+                $table->enum('choices', ['foo', 'bar']);  //	Son opciones, solo aceptará las opciones del array (foo, bar)
                 $table->float('amount', 8, 2);  //	FLOAT equivalent for the database, 8 digits in total and 2 after the decimal point.
                 $table->increments('id');  //	Incrementing ID (primary key) using a "UNSIGNED INTEGER" equivalent.
                 $table->integer('votes');  //	INTEGER equivalent for the database.
