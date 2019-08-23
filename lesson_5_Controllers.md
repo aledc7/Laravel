@@ -75,12 +75,12 @@ class ShowController extends Controller
 }
 ```
 
-### Añadiendo el parámetro --resource a la creación de una controladora
+### Añadiendo el parámetro -r (-- resource) a la creación de una controladora
 
-Con el comando php artisan make:controller NombreController --resource añadiendole el **--resource**, le creara todos los metodos recomendados por laravel para hacer el crud: index,show,create,store,edit,destroy   
+Con el comando php artisan make:controller NombreController -r añadiendole el **-r**, le creara todos los metodos recomendados por laravel para hacer el crud: index,show,create,store,edit,destroy   
 
 
-### Aquí un ejemplo de la Controladora que se genera al pasarle el aprametro --resource.
+### Aquí un ejemplo de la Controladora que se genera al pasarle el aprametro -r.
 ### Observemos que se crearán todos los métodos necesarios para un ABM (CRUD)
 ```php
 class pruebaResourcesController extends Controller
