@@ -38,8 +38,9 @@ protected $middleware = [
 php artisan vendor:publish --provider="Barryvdh\Cors\ServiceProvider"
 ````
 
-- 4 - Por último, editar el archivo __config/cors.php__ y agregar la url que queremos que permita CORS.
- Es usar un __*__ para permitir todo:
+- 4 - Por último, editar el archivo __config/cors.php__ y agregar la url que queremos que permita CORS.   
+ En caso de querer permitir todo, colocar un __*__ para permitir todo.   
+ Esto en la linea __'allowedOrigins' => ['*']__   
 ```php
 return [
 
