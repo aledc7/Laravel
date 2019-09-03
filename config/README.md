@@ -9,7 +9,7 @@
 
 # Configuraciónes de Laravel
 
-### Esta seccion contiene las distintas posibles configuraciónes de Laravel
+###### Esta seccion contiene las distintas posibles configuraciónes de Laravel
 
 
 
@@ -20,7 +20,7 @@ En caso de que se quiera cambiar el puerto predeterminado, que viene seteado en 
 
 1 - Provisoria, la cual lo cambiará solo por esa ejecucion
 ```php
-php artisan serve --port 7342
+php artisan serve --port=7342
 ````
 
 2 - Fija, la cual lo dejará siempre en el puerto que configuremos
@@ -41,3 +41,4 @@ sudo nano vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeComman
         ];
     }
 ````
+____________________________________________________________________________________________________________________
