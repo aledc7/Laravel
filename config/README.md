@@ -42,3 +42,21 @@ sudo nano vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeComman
     }
 ````
 ____________________________________________________________________________________________________________________
+# Personalizar Color de fuente de los errores del Tinker
+
+Tinker tiene configurado el color de la fuente GRIS con fondo ROJO...  esto es un error de alguien, ya que no es cómodo ni legible.
+
+
+para corregir esto es necesario editar dentro de cada proyecto el archivo __ShellOutput.ph__  aca se muestra como:
+
+
+```php
+./vendor/psy/psysh/src/Output/ShellOutput.php
+
+# En la linea 178 cambiar 'red' por 'white'
+
+// $formatter->setStyle('error', new OutputFormatterStyle('black', 'red', ['bold']));
+$formatter->setStyle('error', new OutputFormatterStyle('black', 'white', ['bold']));
+````
+
+
