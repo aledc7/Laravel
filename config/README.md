@@ -120,6 +120,20 @@ return [
 
 
 Eso es todo.... ahora no recibiran mas el error de CORS
+_________________________________________________________________________________________________________________
 
+
+## Cambiar el idioma de los errores
+
+1 - Descargar la carpeta [es](https://github.com/aledc7/Laravel/tree/master/resources/es) y colocarla dentro del directorio:
+```php
+/resources/lang/
+````
+2 - Editar el archivo __config/app.php__  y cambiar el valor de __locale => 'en'__ por __es__   
+```php
+'locale' => 'es',
+````
+Eso es todo
+_________________________________________________________________________________________________________________
 
 
