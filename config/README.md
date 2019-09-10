@@ -135,5 +135,17 @@ ________________________________________________________________________________
 ````
 Eso es todo
 _________________________________________________________________________________________________________________
+## Instalar Passport
+
+1 - Agregar esta linea en el /config/app.php, dentro del array de __providers__:    
+```php
+Laravel\Passport\PassportServiceProvider::class,
+````
+
+2 - Correr este comando para instalar las dependencias de Passport: 
+```php
+composer require laravel/passpor
+````
+
 
 
