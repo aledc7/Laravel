@@ -155,6 +155,10 @@ Now, we can create our first project.
 
 ```php
 composer create-project --prefer-dist laravel/laravel hellolaravel
+
+# Install specific version, in this case the 5.7 version.
+composer create-project --prefer-dist laravel/laravel hellolaravel "5.7"
+
 ```
 
 ahother way is throught the Laravel Installer:
