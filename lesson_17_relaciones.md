@@ -80,5 +80,5 @@ Por ejemplo, encadenando el método __where()__ a __users()__ es posible obtener
 $profession->users()->where('is_admin', true)->get();
 ````
 
-[Siguiente Leccón -->]()
+[Siguiente Leccón -->](https://github.com/aledc7/Laravel/blob/master/lesson_18_Model_Factories.md)
 
