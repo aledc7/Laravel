@@ -41,6 +41,29 @@ sudo nano vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeComman
         ];
     }
 ````
+
+
+____________________________________________________________________________________________________________________
+# Cambiar Zona Horaria de Laravel
+
+Editar el archivo __/config/app.php__   y setear la linea correspondiente a la zona horaria deseada:
+
+```php
+    /*
+    |--------------------------------------------------------------------------
+    | Application Timezone
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the default timezone for your application, which
+    | will be used by the PHP date and date-time functions. We have gone
+    | ahead and set this to a sensible default for you out of the box.
+    |
+    */
+
+
+    'timezone' => 'America/Argentina/Buenos_Aires',
+
+````
 ____________________________________________________________________________________________________________________
 # Personalizar Color de fuente de los errores del Tinker
 
