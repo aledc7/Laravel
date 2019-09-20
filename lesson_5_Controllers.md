@@ -77,7 +77,13 @@ class ShowController extends Controller
 
 ### Añadiendo el parámetro -r (-- resource) a la creación de una controladora
 
-Con el comando __php artisan make:controller NombreController -r__ añadiendole el **-r**, le creara todos los metodos recomendados por laravel para hacer el crud: index,show,create,store,edit,destroy   
+Con el comando __php artisan make:controller NombreController -r__ añadiendole el **-r**, le creara todos los metodos recomendados por laravel para hacer el crud: index,show,create,store,edit,destroy.
+
+
+### Como Generar un Controlador para una API:
+```php
+php artisan make:controller ControladorPrueba
+```
 
 
 ### Aquí un ejemplo de la Controladora que se genera al pasarle el aprametro -r.
