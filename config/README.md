@@ -179,10 +179,10 @@ php artisan passport:install
 Encryption keys generated successfully.
 Personal access client created successfully.
 Client ID: 1
-Client secret: 9JEpWrSugcV6CcjAPzp2ScH6VVzoJ8YLk2CZ3tXu
+Client secret: ABCDEFGugcV6CcjAPzp2ScH6VVzoJ8YLkHIJKLMN
 Password grant client created successfully.
 Client ID: 2
-Client secret: A7jLk4WnCbdgnROMWZrqBjyzmy7XltwgWOTB0bxS
+Client secret: QWERTYYOTnROMWZrqBjyzmy7XltwgRREREGVLKHL
 ````
 
 
