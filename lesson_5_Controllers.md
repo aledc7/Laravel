@@ -82,7 +82,7 @@ Con el comando __php artisan make:controller NombreController -r__ añadiendole 
 
 ### Como Generar un Controlador para una API:
 ```php
-php artisan make:controller ControladorPrueba
+php artisan make:controller ControladorPrueba -r
 ```
 
 
