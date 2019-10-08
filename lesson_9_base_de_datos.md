@@ -23,6 +23,12 @@ php artisan migrate:fresh --seed
 ````
 
 
+# Crear una nueva migracion:
+```php
+php artisan make:migration create_users_table
+````
+
+
 
 
 > Las bases de datos son uno de los aspectos más importantes de un proyecto. Sin embargo el proceso de tener que diseñar, crear y llevar el control de la misma puede resultar bastante tedioso. Afortunadamente Laravel nos proporciona un mecanismo llamado Migraciones con el cual podremos diseñar la estructura de nuestra base de datos y mantener su historial de cambios a lo largo del desarrollo del proyecto.
