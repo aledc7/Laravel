@@ -8,7 +8,7 @@
 
 
 
-## Level:  Intermediate
+## Laravel [Certification](https://github.com/aledc7/Laravel/blob/master/Laravel%20Certification%20-%20De%20Castro%20Alejandro.pdf)
 ### Required Knowledge:  PHP Basic
 
 This repo has all the practice of my training in Laravel. It also serve as a Documentation for the most commonly used commands.  
