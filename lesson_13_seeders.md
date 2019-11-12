@@ -84,18 +84,30 @@ class ProfessionSeeder extends Seeder
 }
 ````
 
-## Ejecutar un seeder
+## Ejecutar todos los seeder
 Para ejecutar los seeders se utiliza el comando __db:seed__ desde la terminal:
 
 ```php
 php artisan db:seed
 ````
 
+
+## Ejecutar un único seeder
+En caso que se quiera ejecutar un único seeder, se puede indicar de la siguiente manera:
+```php
+php artisan db:seed --class=NombreDelSeeder
+````
+
+## Autoload en caso de error.
+
 En caso de que arroje un error de que la clase no existe, se deberá correr el comand __php dump-autoload__ para solucionarlo:
 
 ```php
 composer dump-autoload
 ````
+
+
+
 
 Una vez terminado, volver a correr __php artisan db:seed__ y debería hacer el insert.
 
