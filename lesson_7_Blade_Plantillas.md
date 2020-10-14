@@ -110,7 +110,7 @@ Laravel compila y guarda en caché nuestras vistas, por lo que usar el motor de 
 Utilizando el comando view:clear podemos eliminar desde la terminal la vistas en caché:
 
 ```php
-php artisan view:clear
+php artisan view:clearv
 ```
 
 [ir a la lección 8 --> Layouts](https://github.com/aledc7/Laravel/blob/master/lesson_8_Layouts.md)
